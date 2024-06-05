@@ -6,6 +6,10 @@ import StickerImage2 from '../landingpages/images/Group 92540.png'
 import StickerImage3 from '../landingpages/images/Group 92541.png'
 import Image7 from '../landingpages/images/Group 92584.png'
 import Image8 from '../landingpages/images/image 32.png'
+import Image9 from '../landingpages/images/image 29.png'
+import Image10 from '../landingpages/images/Mask group (1).png'
+import Image11 from '../landingpages/images/MacBook Pro 14_ - 6ia.png'
+import Image12 from '../landingpages/images/Group 92585.png'
 
 
 export default function Page4() {
@@ -32,20 +36,62 @@ export default function Page4() {
                 </div>
                 <div className='w-1/2'>
                     <div className='relative w-full h-auto'>
-                        <Image src={Image7} alt='image' />
-                        <div className='absolute inset-0 w-[80%] bottom-0 right-0 flex'>
-                            <Image src={Image8} alt='image' className='w-[] backdrop-filter backdrop-blur-md bg-opacity-50 rounded-tl-[30px] absolute bottom-0 right-0 '/>
+                        <Image src={Image7} alt='image' className='rounded-br-[66px]' />
+                        <div className='absolute inset-0 flex justify-end items-end flex-row rounded-[30px]'>
+                            <Image src={Image8} alt='image' className='w-[90%] bg-gradient-to-l from-[#3A3A3A57] to-[#03FFA31A]  backdrop-filter backdrop-blur-md bg-opacity-50 rounded-tl-[30px] rounded-br-[66px] pt-6 pl-6' />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <div>
-                <div className='flex flex-row items-center gap-2'>
-                    <Image src={StickerImage} alt='image' className='w-[10%]'/>
-                    <p className='text-[#BDBDBD73] text-[13.96px]'>Context-aware AI co-pilot</p>
+            <div className='flex flex-row px-10 w-[80%] mx-auto my-14'>
+                <div className='w-1/2 flex flex-col justify-center'>
+                    <div className='flex flex-row gap-2 items-center'>
+                        <Image src={StickerImage} alt='image' className='w-[5%]'/>
+                        <p className='text-[13.96px]'>Context-aware AI co-pilot</p>
+                    </div>
+                    <Image src={StickerImage2} alt='image' className='w-[7%] mt-5'/>
+                    <p className='text-[29.91px] text-white mb-5 mt-8'>Intelligent Automation on Steroids</p>
+                    <p className='text-[16px] text-[#BDBDBD] w-[90%]'>Introducing your personal social media strategist driven by AI, streamlining content planning, scheduling, and interaction on twitter and other platforms. Leveraging data to grasp your audience's behavior and preferences, we optimize your content strategy for unparalleled engagement.</p>
+                    <div className='flex flex-row gap-2 items-center mb-3 mt-4'>
+                        <Image src={StickerImage3} alt='image' className='w-[7%] ' />
+                        <p className='text-[13.96px]'>Query Escalation Protocol</p>
+                    </div>
                 </div>
+
+                <div className='w-1/2'>
+                <div className='relative w-full h-auto'>
+                        <Image src={Image12} alt='image' className='rounded-br-[66px]' />
+                        <div className='absolute inset-0 flex justify-end items-end flex-row rounded-[30px]'>
+                            <Image src={Image11} alt='image' className='w-[92%] bg-gradient-to-l from-[#3A3A3A57] to-[#03FFA31A]   bg-opacity-50 rounded-tl-[30px] rounded-br-[66px]' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className='flex flex-row px-10 w-[80%] mx-auto my-20'>
+                <div className='w-1/2 flex-col flex justify-center'>
+                    <div className='flex flex-row items-center gap-2'>
+                        <Image src={StickerImage} alt='image' className='w-[5%]' />
+                        <p className='text-[#EFEFEF73] text-[13.96px]'>Context-aware AI co-pilot</p>
+                    </div>
+                    <div className='flex flex-row items-center mt-5 gap-2'>
+                        <Image src={StickerImage3} alt='image' className='w-[5%] ' />
+                        <p className='text-[#EFEFEF73] text-[13.96px]'>Content Strategy Setup</p>
+                    </div>
+                    <Image src={StickerImage2} alt='image' className='w-[9%] mt-5' />
+
+                    <p className='font-medium text-[29.91px] mt-8 mb-5 text-white'>Advanced Query Escalation Protocol</p>
+                    <p className='text-[#BDBDBD] text-[16px] w-[88%]'>Our  context aware smart engine  streamlines the handling of out of scope  user inquiries by automatically identifying, categorizing, and routing complex queries to the most suitable responder within your organization. Tailored to consider complexity, urgency, and subject matter, this protocol ensures  timely, informed, and contextually relevant responses, elevating user experience within your community.</p>
+                </div>
+
+                <div className='w-1/2'>
+                    <div className='relative w-full h-auto rounded-[66px] border-2 border-[#3A3A3A] bg-[]'>
+                        <Image src={Image10} alt='image' />
+                        <div className='absolute inset-0 flex flex-row px-10 justify-center pt-10'>
+                            <Image src={Image9} alt='image' className='w-[80%] bg-gradient-to-l from-[#3A3A3A57] to-[#03FFA31A]  backdrop-filter backdrop-blur-md bg-opacity-50 rounded-t-[30px]' />
+                        </div>
+                    </div>
                 </div>
             </div>
 
