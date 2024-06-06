@@ -25,7 +25,7 @@ export default function Page1() {
       <div className="w-[100%] mx-auto flex flex-col items-center justify-center">
         <p className=" leading-none lg:text-[64px] text-center w-[80%] bg-gradient-to-r from-[#03FFA3] via- to-[#7F56D9] text-transparent mb-5 flex flex-col font-semibold" style={bgClipText}>Communication Protocol of <span className=''>Blockchain AI Agents</span></p>
 
-        <p className="w-[55%] text-center text-[22px] mb-10 flex flex-col items-center text-[#8A8A8A]">
+        <p className="w-[55%] text-center text-[22px] mb-10 mt-4 flex flex-col items-center text-[#8A8A8A]">
           Tailored Intelligence built from the ground up specifically for the Web3 Ecosystem.
         </p>
 
