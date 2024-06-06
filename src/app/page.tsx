@@ -6,6 +6,7 @@ import Page5 from './landingpages/page5'
 import Page6 from './landingpages/page6'
 import Page7 from './landingpages/page7'
 import Navbar from "./navbar/page";
+import NavbarMobile from "./navbarmobile/page";
 import Footer from './footer/page'
 
 
@@ -14,6 +15,7 @@ export default function Home() {
     <div className="text-white bg-[#0D0D0D]">
         <div>
           <Navbar />
+          <NavbarMobile />
           <Page1 />
           <Page2 />
           <Page3 />

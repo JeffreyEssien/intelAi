@@ -23,7 +23,8 @@ export default function Page1() {
 <Image src={Overlay} alt='Overlay' className='absolute bottom-0 left-1/2 transform -translate-x-1/2' />
 
       <div className="w-[100%] mx-auto flex flex-col items-center justify-center">
-        <p className=" leading-tight lg:text-[64px] text-[36px] text-center w-[80%] bg-gradient-to-r from-[#03FFA3] via- to-[#7F56D9] text-transparent mb-5 flex flex-col font-semibold" style={bgClipText}>Communication Protocol of <span className=''>Blockchain AI Agents</span></p>
+        <p className=" leading-tight lg:text-[64px] text-[30px] text-center w-[80%] bg-gradient-to-r from-[#03FFA3] via- to-[#7F56D9] text-transparent mb-5 lg:flex flex-col font-semibold hidden" style={bgClipText}>Communication Protocol of <span className=''>Blockchain AI Agents</span></p>
+        <p className=" leading-tight lg:text-[64px] text-[30px] text-center w-[80%] bg-gradient-to-r from-[#03FFA3] via- to-[#7F56D9] text-transparent mb-5 flex flex-col font-semibold lg:hidden" style={bgClipText}>Communication Protocol of Blockchain AI Agents</p>
 
         <p className="lg:w-[55%] w-[80%] text-center text-[22px] mb-10 mt-4 flex flex-col items-center text-[#8A8A8A]">
           Tailored Intelligence built from the ground up specifically for the Web3 Ecosystem.
@@ -42,7 +43,7 @@ export default function Page1() {
             alt='Image1'
             className='z-40 bg-gradient-to-l from-[#DC1FFF52] to-[#03FFA31A] backdrop-filter backdrop-blur-md bg-opacity-50 rounded-[30px] p-4'
           />  */}
-          <video autoPlay loop muted className=" lg:w-[95%] h-2/3 rounded-[60px] bg-gradient-to-l from-[#DC1FFF52] to-[#03FFA31A] backdrop-filter backdrop-blur-md bg-opacity-50 p-4" src="./landingpagevid.mp4"/>
+          <video autoPlay loop muted controls={false} className=" lg:w-[95%] h-2/3 rounded-[60px] bg-gradient-to-l from-[#DC1FFF52] to-[#03FFA31A] backdrop-filter backdrop-blur-md bg-opacity-50 p-4" src="./landingpagevid.mp4"/>
           </div>
         </div>
 
