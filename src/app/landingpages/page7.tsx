@@ -27,48 +27,48 @@ export default function Page7() {
             </div> */}
             <Image src={Gradient} alt="image" className="absolute bottom-0 left-1/2 transform -translate-x-1/2"/>
 
-            <p className="text-white text-center text-[40px] mb-3">Frequently asked questions</p>
+            <p className="text-white text-center lg:text-[40px] text-[36px] w-[90%] mb-3">Frequently asked questions</p>
             <p className="text-[16px] text-center w-[40%] text-[#8A8A8A]">Everything you need to know</p>
 
-            <div className="flex flex-col w-[55%] mt-20">
+            <div className="flex flex-col lg:w-[55%] w-[80%] mt-20">
 
                 <div className="flex flex-row justify-between border-b border-[#2B2B2B] py-6 items-center">
-                    <p className="text-white text-[16px]">What is Intel AI and how does it benefit community managers and influencers?</p>
+                    <p className="text-white text-[16px] w-[80%]">What is Intel AI and how does it benefit community managers and influencers?</p>
                     <p><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.3333 7.60672V15.5824M7.34549 11.5945H15.3211M21.3029 11.5945C21.3029 17.1006 16.8393 21.5641 11.3333 21.5641C5.82729 21.5641 1.36377 17.1006 1.36377 11.5945C1.36377 6.08852 5.82729 1.625 11.3333 1.625C16.8393 1.625 21.3029 6.08852 21.3029 11.5945Z" stroke="white" stroke-width="1.99391" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     </p>
                 </div>
                 <div className="flex flex-row justify-between border-t border-[#2B2B2B] py-6 items-center">
-                    <p className="text-white text-[16px]">How do I get started with training an AI on Intel AI?</p>
+                    <p className="text-white text-[16px] w-[80%]">How do I get started with training an AI on Intel AI?</p>
                     <p><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.3333 7.60672V15.5824M7.34549 11.5945H15.3211M21.3029 11.5945C21.3029 17.1006 16.8393 21.5641 11.3333 21.5641C5.82729 21.5641 1.36377 17.1006 1.36377 11.5945C1.36377 6.08852 5.82729 1.625 11.3333 1.625C16.8393 1.625 21.3029 6.08852 21.3029 11.5945Z" stroke="white" stroke-width="1.99391" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     </p>
                 </div>
                 <div className="flex flex-row justify-between border-t border-[#2B2B2B] py-6 items-center">
-                    <p className="text-white text-[16px]">What are 'Animation Steroids' and how can they enhance my projects?</p>
+                    <p className="text-white text-[16px] w-[80%]">What are 'Animation Steroids' and how can they enhance my projects?</p>
                     <p><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.3333 7.60672V15.5824M7.34549 11.5945H15.3211M21.3029 11.5945C21.3029 17.1006 16.8393 21.5641 11.3333 21.5641C5.82729 21.5641 1.36377 17.1006 1.36377 11.5945C1.36377 6.08852 5.82729 1.625 11.3333 1.625C16.8393 1.625 21.3029 6.08852 21.3029 11.5945Z" stroke="white" stroke-width="1.99391" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     </p>
                 </div>
                 <div className="flex flex-row justify-between border-t border-[#2B2B2B] py-6 items-center">
-                    <p className="text-white text-[16px]">How does the 'Advanced Query Escalation Protocol' work?</p>
+                    <p className="text-white text-[16px] w-[80%]">How does the 'Advanced Query Escalation Protocol' work?</p>
                     <p><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.3333 7.60672V15.5824M7.34549 11.5945H15.3211M21.3029 11.5945C21.3029 17.1006 16.8393 21.5641 11.3333 21.5641C5.82729 21.5641 1.36377 17.1006 1.36377 11.5945C1.36377 6.08852 5.82729 1.625 11.3333 1.625C16.8393 1.625 21.3029 6.08852 21.3029 11.5945Z" stroke="white" stroke-width="1.99391" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     </p>
                 </div>
                 <div className="flex flex-row justify-between border-t border-[#2B2B2B] py-6 items-center">
-                    <p className="text-white text-[16px]">Can I update my projects and announcements through Intel AI?</p>
+                    <p className="text-white text-[16px] w-[80%]">Can I update my projects and announcements through Intel AI?</p>
                     <p><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.3333 7.60672V15.5824M7.34549 11.5945H15.3211M21.3029 11.5945C21.3029 17.1006 16.8393 21.5641 11.3333 21.5641C5.82729 21.5641 1.36377 17.1006 1.36377 11.5945C1.36377 6.08852 5.82729 1.625 11.3333 1.625C16.8393 1.625 21.3029 6.08852 21.3029 11.5945Z" stroke="white" stroke-width="1.99391" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                     </p>
                 </div>
                 <div className="flex flex-row justify-between border-t border-[#2B2B2B] py-6 items-center">
-                    <p className="text-white text-[16px]">Is Intel AI secure and how does it protect my data?</p>
+                    <p className="text-white text-[16px] w-[80%]">Is Intel AI secure and how does it protect my data?</p>
                     <p><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.3333 7.60672V15.5824M7.34549 11.5945H15.3211M21.3029 11.5945C21.3029 17.1006 16.8393 21.5641 11.3333 21.5641C5.82729 21.5641 1.36377 17.1006 1.36377 11.5945C1.36377 6.08852 5.82729 1.625 11.3333 1.625C16.8393 1.625 21.3029 6.08852 21.3029 11.5945Z" stroke="white" stroke-width="1.99391" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
@@ -76,7 +76,7 @@ export default function Page7() {
                 </div>
             </div>
 
-            <div className="flex flex-row justify-between w-[60%] my-20 items-center py-14 px-10 rounded-[20px] bg-gradient-to-br from-[#BDFE1C] via-[#25B8DE] to-[#460DFF] mb-60">
+            <div className="flex flex-col lg:flex-row justify-between lg:w-[60%] w-[80%] my-20 items-center py-14 px-10 rounded-[20px] bg-gradient-to-br from-[#BDFE1C] via-[#25B8DE] to-[#460DFF] lg:mb-60">
                 <div className="flex flex-col">
                     <p className="text-[24px] text-white mb-2">Still have questions?</p>
                     <p className="text-[#2A336D] text-[16px] w-[70%]">Can’t find the answer you’re looking for? Please chat to our friendly team.</p>

@@ -25,11 +25,11 @@ export default function Page5() {
             </div>
 
             <p className="text-white text-[30px] font-medium text-center mb-3">Advantages</p>
-            <p className="text-[#BDBDBD] text-[16px] text-center w-[40%]">Discover a world of possibilities with Glossy's exceptional features tailored to enhance your coding journey.</p>
+            <p className="text-[#BDBDBD] text-[16px] text-center lg:w-[40%] w-[95%]">Discover a world of possibilities with Glossy's exceptional features tailored to enhance your coding journey.</p>
 
-            <div className="flex flex-col mx-20 space-y-20 mt-40 mb-20 pb-20 border-b border-[#272727] ">
-                <div className="flex flex-row ">
-                    <div className="flex flex-col w-1/3">
+            <div className="flex flex-col lg:mx-20 mx-10 space-y-20 mt-40 mb-20 pb-20 border-b border-[#272727] ">
+                <div className="flex flex-col lg:flex-row ">
+                    <div className="flex flex-col lg:w-1/3">
                         <p className="mb-5"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="1.14638" y="1.29726" width="46.8522" height="46.8522" rx="23.4261" fill="#13160B" />
                             <rect x="1.14638" y="1.29726" width="46.8522" height="46.8522" rx="23.4261" stroke="#03FFA3" stroke-width="0.996856" />
@@ -46,7 +46,7 @@ export default function Page5() {
                         <p className="text-white text-[20px] font-medium">Smart Autocomplete</p>
                         <p className="text-[16px] text-[#BDBDBD73] w-[90%]">Say goodbye to typos and endless typing! Our Smart Autocomplete feature predicts your next word accurately, saving you time and frustration.</p>
                     </div>
-                    <div className="flex flex-col w-1/3">
+                    <div className="flex flex-col lg:w-1/3 my-5 lg:my-0">
                         <p className="mb-5"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.83876" y="1.29726" width="46.8522" height="46.8522" rx="23.4261" fill="#13160B" />
                             <rect x="0.83876" y="1.29726" width="46.8522" height="46.8522" rx="23.4261" stroke="#03FFA3" stroke-width="0.996856" />
@@ -56,7 +56,7 @@ export default function Page5() {
                         <p className="text-white text-[20px] font-medium">Your Privacy is Our Priority.</p>
                         <p className="text-[#BDBDBD73] text-[16px] w-[90%]">Your privacy and data security are paramount, especially in the crypto world. You have complete control over your data and can delete it from our systems at any time.</p>
                     </div>
-                    <div className="flex flex-col w-1/3">
+                    <div className="flex flex-col lg:w-1/3">
                         <p className="mb-5"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.530655" y="1.29726" width="46.8522" height="46.8522" rx="23.4261" fill="#13160B" />
                             <rect x="0.530655" y="1.29726" width="46.8522" height="46.8522" rx="23.4261" stroke="#03FFA3" stroke-width="0.996856" />
@@ -69,8 +69,8 @@ export default function Page5() {
                     </div>
                 </div>
 
-                <div className="flex flex-row">
-                    <div className="flex flex-col w-1/3">
+                <div className="flex flex-col lg:flex-row">
+                    <div className="flex flex-col lg:w-1/3">
                         <p className="mb-5"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="1.14638" y="0.857803" width="46.8522" height="46.8522" rx="23.4261" fill="#13160B" />
                             <rect x="1.14638" y="0.857803" width="46.8522" height="46.8522" rx="23.4261" stroke="#03FFA3" stroke-width="0.996856" />
@@ -81,7 +81,7 @@ export default function Page5() {
                         <p className="text-white text-[20px] font-medium">Community and Audience Mangement</p>
                         <p className="text-[#BDBDBD73] text-[16px] w-[90%]">Our Community and Audience Management tools empower you to engage with your community effectively, fostering meaningful interactions and building lasting relationships.</p>
                     </div>
-                    <div className="flex flex-col w-1/3">
+                    <div className="flex flex-col lg:w-1/3 my-5 lg:my-0">
                         <p className="mb-5"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.83876" y="0.857803" width="46.8522" height="46.8522" rx="23.4261" fill="#13160B" />
                             <rect x="0.83876" y="0.857803" width="46.8522" height="46.8522" rx="23.4261" stroke="#03FFA3" stroke-width="0.996856" />
@@ -92,7 +92,7 @@ export default function Page5() {
                         <p className="text-white text-[20px] font-medium">Ghost-Writer Content Generator</p>
                         <p className="text-[#BDBDBD73] text-[16px] w-[90%]">Co-pilot Content Generator takes your content creation to new heights, providing inspiration and assistance every step of the way.</p>
                     </div>
-                    <div className="flex flex-col w-1/3">
+                    <div className="flex flex-col lg:w-1/3">
                         <p className="mb-5"><svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.530655" y="0.857803" width="46.8522" height="46.8522" rx="23.4261" fill="#13160B" />
                             <rect x="0.530655" y="0.857803" width="46.8522" height="46.8522" rx="23.4261" stroke="#03FFA3" stroke-width="0.996856" />

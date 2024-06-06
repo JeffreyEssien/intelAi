@@ -23,18 +23,18 @@ export default function Footer() {
     };
 
     return (
-        <div className="bg-[#000000] text-[#707070] pt-40 pb-10 relative overflow-hidden">
+        <div className="bg-[#000000] text-[#707070] pt-10 lg:pt-40 pb-10 relative overflow-hidden">
 
             <div className="w-[40%] h-1/3 absolute bottom-[0] right-[-130px]" style={style}>
             </div>
             <div className="w-[37%] h-1/2 absolute bottom-[0] right-[-200px] rotate-" style={style2}>
             </div>
 
-            <div className="flex flex-row justify-between w-[85%] mx-auto border-b border-[#272727]">
+            <div className="flex flex-col lg:flex-row justify-between w-[85%] mx-auto border-b border-[#272727]">
                 <div className="flex flex-row w-1/2">
                     <Image src={Logo} alt='image' className="w-[228px] h-[68px]" />
                 </div>
-                <div className="flex flex-col w-1/2 pb-14">
+                <div className="flex flex-col lg:w-1/2 pb-14">
                     <p className="text-[16px] text-white font-medium mb-8">Company</p>
                     <p className="text-[14px]">Cykelbarometer tiskap, regnbågsbarn. Diren kude. Trangen tön. Andrafiering plabel. Antist dibel.
                         Detet plar. Sorat prio. Dedon bise, sor. Tötrenas pan om terasm. Emgram eurovis om backslick.
