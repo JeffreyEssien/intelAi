@@ -13,8 +13,33 @@ export default function Page3() {
         backgroundClip: 'text',
       };
 
+      const style: React.CSSProperties = {
+        background:
+          "radial-gradient(circle, rgba(3, 255, 163, 0.05), rgba(13, 13, 13, 0.9))",
+        backgroundBlendMode: "darken",
+        filter: "blur(50px)",
+      };
+
+      const style2: React.CSSProperties = {
+        background:
+          "radial-gradient(circle, rgba(3, 255, 163, 0.2), rgba(13, 13, 13, 0.9))",
+        backgroundBlendMode: "darken",
+        filter: "blur(50px)",
+      };
+    
+
+    const style1: React.CSSProperties = {
+        background: 'radial-gradient(circle, rgba(4, 55, 155, 0.7), rgba(10, 16, 25, 0.7))',
+        backgroundBlendMode: "darken",
+        filter: "blur(30px)"
+    }
+
     return(
-        <div className="bg-[#0D0D0D] text-[#8A8A8A] flex flex-col items-center mt-20">
+        <div className="bg-[#0D0D0D] text-[#8A8A8A] flex flex-col items-center pt-20 bg-gradient relative overflow-hidden">
+            <div  className="w-[25%] h-1/3 absolute top-[-100px] right-[-40px] " style={style}>
+            </div>
+            <div  className="w-[25%] h-1/3 absolute top-[-100px] right-[-50px] " style={style2}>
+            </div>
             <p className="text-white text-center text-[36px] mb-6 font-medium">Custom AI  Agents Like Never Before</p>
             <p className="text-[24px] text-center w-[45%] mb-10">Intel AI leverages a custom LLM architecture that's fine-tuned to grasp the intricacies of blockchain technology, its narratives, trends, & community nuances with unparalleled precision</p>
 
@@ -31,7 +56,7 @@ export default function Page3() {
                 <p className="text-[16px] px-4 w-[90%]">Engage your social following and audience on twitter, reddit and others using <span className='font-medium text-white'>Intel<span className='font-bold text-white'>ai</span> </span></p>
                 </div>
 
-                <div className="bg-gradient-to-b from-[#070707] to-[#181818] w-1/3 px-2 pb-10 pt-2 rounded-[20px]">
+                <div className="bg-gradient-to-b from-[#070707] to-[#181818] w-1/3 px-2 pb-10 pt-8 rounded-[20px]">
                 <Image src={Image6} alt="image" className="object-cover"/>
                 <p className="text-white lg:text-[36px] px-4 pt-4 font-medium">KOLs & Influencers</p>
                 <p className="text-[16px] px-4 w-[90%]">Engage your social following and audience on twitter, reddit and others using <span className='font-medium text-white'>Intel<span className='font-bold text-white'>ai</span> </span></p>

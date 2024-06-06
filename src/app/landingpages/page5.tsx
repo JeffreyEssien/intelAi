@@ -1,8 +1,29 @@
 import React from "react"
 
 export default function Page5() {
+
+    const style: React.CSSProperties = {
+        background:
+            "radial-gradient(circle, rgba(3, 255, 163, 0.31), rgba(16, 12, 14, 0.2))",
+        backgroundBlendMode: "darken",
+        filter: "blur(50px)",
+    };
+
+    const style2: React.CSSProperties = {
+        background:
+            "radial-gradient(circle, rgba(3, 255, 163, 0.2), rgba(13, 13, 13, 0.9))",
+        backgroundBlendMode: "darken",
+        filter: "blur(50px)",
+    };
+
     return (
-        <div className="flex flex-col items-center mt-10">
+        <div className="flex flex-col items-center mt-10 relative overflow-hidden">
+
+            <div className="w-[37%] h-1/4 absolute bottom-[-10px] right-[-230px] " style={style}>
+            </div>
+            <div className="w-[37%] h-1/4 absolute bottom-[-10px] right-[-250px] rotate-45" style={style2}>
+            </div>
+
             <p className="text-white text-[30px] font-medium text-center mb-3">Advantages</p>
             <p className="text-[#BDBDBD] text-[16px] text-center w-[40%]">Discover a world of possibilities with Glossy's exceptional features tailored to enhance your coding journey.</p>
 
