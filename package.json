@@ -11,11 +11,13 @@
   "dependencies": {
     "@next/font": "^14.2.3",
     "next": "14.2.3",
+    "next-cloudinary": "^6.6.2",
     "next-video": "^1.1.0",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
-    "react-photo-album": "^2.4.0"
+    "react-photo-album": "^2.4.0",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@types/node": "^20",
