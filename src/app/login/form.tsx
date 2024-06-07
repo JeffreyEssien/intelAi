@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import TelegramImg from '../landingpages/images/vector.png'
+import TelegramImg from '../landingpages/images/Vector.png'
 import XImg from '../landingpages/images/X influencer.png'
 import Link from "next/link";
 
