@@ -22,7 +22,7 @@ export default function Connect() {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-      window.location.href = "/";
+      window.location.href = "/persona";
     }, 1000);
   };
 
