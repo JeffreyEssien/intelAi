@@ -9,14 +9,15 @@ export default function Persona() {
     setLoading(true);
     setTimeout(() => {
       window.location.href = "/";
-    }, 1000); // Wait for 60 seconds before redirecting
+    }, 1000); // Wait for 1 second before redirecting
   };
 
+// redirecting to the community category selector page
   const handleCommunityClick = () => {
     setLoading(true);
     setTimeout(() => {
-      window.location.href = "/";
-    }, 1000); // Wait for 60 seconds before redirecting
+      window.location.href = "/communitytypeselector";
+    }, 1000); // Wait for 1 second before redirecting
   };
 
   return (
@@ -27,8 +28,8 @@ export default function Persona() {
           <div className="loader"> loading</div>
         </div>
       )}
-      <div className="flex flex-row w-[50%] gap-4 justify-center">
-        <div className="w-2/3  rounded-[40px] hover:bg-gradient-to-l from-[#BDFE1C] to-[#25B8DE] backdrop-filter backdrop-blur-md bg-opacity-50 p-[1px]" onClick={handleCommunityClick}>
+      <div className="flex flex-col lg:flex-row lg:w-[50%] w-full items-center gap-4 justify-center mt-10">
+        <div className="lg:w-2/3 w-4/5 rounded-[40px] hover:bg-gradient-to-l from-[#BDFE1C] to-[#25B8DE] backdrop-filter backdrop-blur-md bg-opacity-50 p-[1px]" onClick={handleCommunityClick}>
           <div className="bg-[#131313] hover:bg-gradient-to-br from-[#1C1C1C] via-[#000000] to-[#000000] cursor-pointer py-14 px-4 rounded-[40px]">
             <p className="my-3">
               <svg
@@ -94,7 +95,7 @@ export default function Persona() {
         </div>
 
         <div
-          className="w-2/3 rounded-[40px] hover:bg-gradient-to-l from-[#BDFE1C] to-[#25B8DE] backdrop-filter backdrop-blur-md bg-opacity-50 p-[1px]"
+          className="lg:w-2/3 w-4/5 rounded-[40px] hover:bg-gradient-to-l from-[#BDFE1C] to-[#25B8DE] backdrop-filter backdrop-blur-md bg-opacity-50 p-[1px]"
           onClick={handleKolClick}
         >
           <div className="bg-[#131313] hover:bg-gradient-to-br from-[#1C1C1C] via-[#000000] to-[#000000] cursor-pointer py-14 px-4 rounded-[40px]">

@@ -43,9 +43,9 @@ export default function Connect() {
 
       </div>
 
-      <h1 className="text-[54px] mt-10 text-white">Connect Web3 Wallet</h1>
+      <h1 className="lg:text-[54px] hidden lg:flex mt-10 text-white">Connect Web3 Wallet</h1>
 
-      <div className="flex flex-col lg:w-[25%] mx-auto items-center bg-[#131313] rounded-[16px] my-5 z-20">
+      <div className="flex flex-col lg:w-[25%] w-[90%] mx-auto items-center bg-[#131313] rounded-[16px] my-5 z-20">
         <p className="py-2 border-b border-[#202020] w-full mb-2 text-center text-[#DBDBDB]">
           Connect wallet
         </p>
