@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from './footer/page';
+import ComponentWrapper from "./componentwrapper"; 
 
 const myFont = localFont({
   src: '../../public/fonts/GuarujaNeue-Regular.otf',
@@ -19,7 +21,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={myFont.className}>{children}</body>
+      <body className={myFont.className}>
+        <div className="text-white bg-[#0D0D0D]">
+          <div>
+            <ComponentWrapper /> {/* Use the NavbarWrapper here */}
+            {children}
+          </div>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
