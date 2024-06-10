@@ -28,7 +28,7 @@ export default function LoginForm() {
       await new Promise((resolve) => setTimeout(resolve, 1500));
       console.log('Form submitted successfully!');
       setIsLoading(false);
-      window.location.href = "/connect";
+      window.location.href = "/login/connect";
     } catch (error) {
       console.error('Error submitting form:', error);
       setIsLoading(false);

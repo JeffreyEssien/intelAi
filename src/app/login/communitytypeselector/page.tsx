@@ -14,7 +14,7 @@ export default function CommunityTypeSelector() {
     if (selected) {
       setLoading(true);
       setTimeout(() => {
-        window.location.href = "/";
+        window.location.href = "/successfullogin";
       }, 1000); // Simulating a 1-second loader
     } else {
       alert("Please select a category before proceeding.");

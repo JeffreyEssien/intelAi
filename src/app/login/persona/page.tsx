@@ -16,7 +16,7 @@ export default function Persona() {
   const handleCommunityClick = () => {
     setLoading(true);
     setTimeout(() => {
-      window.location.href = "/communitytypeselector";
+      window.location.href = "/login/communitytypeselector";
     }, 1000); // Wait for 1 second before redirecting
   };
 

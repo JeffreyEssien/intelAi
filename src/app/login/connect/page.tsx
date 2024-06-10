@@ -2,38 +2,57 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Elipse1 from "../landingpages/images/Ellipse 6.png";
-import Elipse2 from "../landingpages/images/Ellipse 107.png";
-import MetamaskImg from "../landingpages/images/MetaMask Symbol.png";
-import CoinbaseImg from "../landingpages/images/Coinbase Symbol.png";
-import MarketCapImg from "../landingpages/images/Coin Market Cap Symbol.png";
-import TrustWalletImg from "../landingpages/images/trust-wallet-svgrepo-com 1.png";
-import coinoneImg from "../landingpages/images/Coinone Symbol.png";
-import BithumbImg from "../landingpages/images/Bithumb Symbol.png";
-import KuCoinImg from "../landingpages/images/KuCoin Symbol.png";
-import HuobiImg from "../landingpages/images/Huobi Symbol.png";
-import Logo from '../landingpages/images/Intel AI logo (1) (1) (1).png'
+import Elipse1 from "../../landingpages/images/Ellipse 6.png"
+import Elipse2 from "../../landingpages/images/Ellipse 107.png";
+import MetamaskImg from "../../landingpages/images/MetaMask Symbol.png";
+import CoinbaseImg from "../../landingpages/images/Coinbase Symbol.png";
+import MarketCapImg from "../../landingpages/images/Coin Market Cap Symbol.png";
+import TrustWalletImg from "../../landingpages/images/trust-wallet-svgrepo-com 1.png";
+import coinoneImg from "../../landingpages/images/Coinone Symbol.png";
+import BithumbImg from "../../landingpages/images/Bithumb Symbol.png";
+import KuCoinImg from "../../landingpages/images/KuCoin Symbol.png";
+import HuobiImg from "../../landingpages/images/Huobi Symbol.png";
+import Logo from '../../landingpages/images/Intel AI logo (1) (1) (1).png'
 
 
 export default function Connect() {
+
+  const style: React.CSSProperties = {
+    background:
+      "radial-gradient(circle, rgba(3, 255, 163, 0.05), rgba(13, 13, 13, 0.9))",
+    backgroundBlendMode: "darken",
+    filter: "blur(50px)",
+  };
+
+  const style2: React.CSSProperties = {
+    background:
+      "radial-gradient(circle, rgba(3, 255, 163, 0.2), rgba(13, 13, 13, 0.9))",
+    backgroundBlendMode: "darken",
+    filter: "blur(50px)",
+  };
+
   const [isLoading, setIsLoading] = useState(false);
 
   const handleItemClick = () => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
-      window.location.href = "/persona";
+      window.location.href = "/login/persona";
     }, 1000);
   };
 
   return (
     <div className="flex flex-col items-center justify-center relative pb-40 overflow-hidden">
-      <Image
-        src={Elipse1}
-        alt="overlay"
-        className="absolute top-0 opacity-50 left-[-300px] -rotate-90 w-[50%]"
-      />
-      <Image src={Elipse2} alt="overlay" className="absolute bottom-0 right-[-700px] -rotate-45" />
+     
+     {/* Gradient styling */}
+      <div className="w-[30%] h-1/2 absolute top-[-20px] left-[-300px] rotate-45 rounded-full opacity-25" style={style}>
+      </div>
+      <div className="w-[30%] h-1/2 absolute top-[-20px] left-[-300px] rotate-45 rounded-full opacity-25" style={style2}>
+      </div>
+      <div className="w-[40%] h-1/2 absolute bottom-[-20px] right-[-240px] rotate-45 rounded-full opacity-30" style={style}>
+      </div>
+      <div className="w-[40%] h-1/2 absolute bottom-[-20px] right-[-200px] rotate-45 rounded-full opacity-30" style={style2}>
+      </div>
 
       <div className="w-[90%] flex justify-end items-center pt-4">
         <Image src={Logo} alt="logo" className="lg:w-[8%]  w-[30%]" />
@@ -84,7 +103,7 @@ export default function Connect() {
               <p>Trust Wallet</p>
             </li>
             <li
-              className="flex flex-row items-center bg-[#1A1A1A] rounded-[16px] py-4 w-[90%] gap-4 cursor-pointer"
+              className="flex flex-row items-center bg-[#1A1A1A] rounded-[16px] py-4 w-[90%] gap- cursor-pointer"
               onClick={handleItemClick}
             >
               <div className="ml-4 w-[20%]">
@@ -97,7 +116,7 @@ export default function Connect() {
                   <Image src={HuobiImg} alt="Huobi" className="w-[30%]" />
                 </div>
               </div>
-              <p>Other Wallets</p>
+              <p className="w-80">Other Wallets</p>
             </li>
           </ul>
         )}

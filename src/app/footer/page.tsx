@@ -1,3 +1,6 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 
 import React from "react"
 
@@ -7,6 +10,14 @@ import Logo from '../landingpages/images/Intel AI logo (1) (1) (1).png'
 
 
 export default function Footer() {
+
+    const pathname = usePathname();
+
+    const noFooterPaths = ["/login", "/connect" , "/persona", "/communitytypeselector", "/successfullogin"]
+
+    if (noFooterPaths.includes(pathname)) {
+        return null;
+      }
 
     const style: React.CSSProperties = {
         background:
