@@ -1,16 +1,17 @@
-"use client";
-
-import { FC } from "react";
+"use client"
 
 interface ModalProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
-const IntelAiWorkspaceModal: FC<ModalProps> = ({ isOpen, onClose }) => {
+export type { ModalProps };
+
+export default function IntelAiWorkspaceModal({ isOpen, onClose }: ModalProps) {
+
     if (!isOpen) return null;
 
-    return (
+    return(
         <div>
             <div className="fixed inset-0 flex items-center justify-center z-50">
                 <div className="absolute inset-0 bg-black opacity-60"></div>
@@ -31,7 +32,5 @@ const IntelAiWorkspaceModal: FC<ModalProps> = ({ isOpen, onClose }) => {
                 </div>
             </div>
         </div>
-    );
-};
-
-export default IntelAiWorkspaceModal;
+    )
+}
