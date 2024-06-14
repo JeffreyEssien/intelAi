@@ -10,13 +10,16 @@
   },
   "dependencies": {
     "@next/font": "^14.2.3",
+    "cloudinary": "^2.2.0",
     "next": "14.2.3",
     "next-cloudinary": "^6.6.2",
     "next-video": "^1.1.0",
     "react": "^18",
+    "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
     "react-photo-album": "^2.4.0",
+    "recharts": "^2.12.7",
     "sharp": "^0.33.4"
   },
   "devDependencies": {

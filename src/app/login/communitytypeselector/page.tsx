@@ -1,6 +1,9 @@
 "use client"
 
 import React, { useState } from "react";
+import Image from "next/image";
+import Logo from '../../landingpages/images/Intel AI logo (1) (1) (1).png'
+
 
 export default function CommunityTypeSelector() {
   const [selected, setSelected] = useState<string | null>(null);
@@ -23,14 +26,22 @@ export default function CommunityTypeSelector() {
 
   return (
     <div className="h-screen flex flex-col items-center justify-center">
+
+      <div className="w-[90%] flex justify-end items-center pt-4">
+        <Image src={Logo} alt="logo" className="lg:w-[8%]  w-[30%]" />
+      </div>
+
+      <div className='mt-4 pt-10 border-t border-[#363636] w-[95%] flex flex-col justify-center items-center'>
+
+      </div>
+
       <p className="text-center lg:text-[32px] w-[90%] text-white my-5">
         Which Category Best Describes your community?
       </p>
       <div className="bg-[#131313] flex flex-col py-6 lg:w-[40%] w-[85%] rounded-[20px]">
         <div
-          className={`border-b border-[#1E1E1E] py-3 px-8 cursor-pointer ${
-            selected === "Launchpad" ? "border-white" : "hover:border hover:border-white"
-          }`}
+          className={`border-b border-[#1E1E1E] py-3 px-8 cursor-pointer ${selected === "Launchpad" ? "border-white" : "hover:border hover:border-white"
+            }`}
           onClick={() => handleDivClick("Launchpad")}
         >
           <p className="text-[14px] text-white">Launchpad</p>
@@ -40,9 +51,8 @@ export default function CommunityTypeSelector() {
           </p>
         </div>
         <div
-          className={`border-b border-[#1E1E1E] py-3 px-8 cursor-pointer ${
-            selected === "Token Project" ? "border-white" : "hover:border hover:border-white"
-          }`}
+          className={`border-b border-[#1E1E1E] py-3 px-8 cursor-pointer ${selected === "Token Project" ? "border-white" : "hover:border hover:border-white"
+            }`}
           onClick={() => handleDivClick("Token Project")}
         >
           <p className="text-[14px] text-white">⁠Token Project</p>
@@ -52,9 +62,8 @@ export default function CommunityTypeSelector() {
           </p>
         </div>
         <div
-          className={`py-3 px-8 cursor-pointer ${
-            selected === "Memecoin Project" ? "border-white" : "hover:border hover:border-white"
-          }`}
+          className={`py-3 px-8 cursor-pointer ${selected === "Memecoin Project" ? "border-white" : "hover:border hover:border-white"
+            }`}
           onClick={() => handleDivClick("Memecoin Project")}
         >
           <p className="text-[14px] text-white">⁠Memecoin Project</p>

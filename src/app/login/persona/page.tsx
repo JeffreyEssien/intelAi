@@ -1,6 +1,8 @@
 "use client"
 
 import React, { useState } from "react";
+import Image from "next/image";
+import Logo from '../../landingpages/images/Intel AI logo (1) (1) (1).png'
 
 export default function Persona() {
   const [loading, setLoading] = useState(false);
@@ -22,6 +24,15 @@ export default function Persona() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-[#0D0D0D]">
+
+      <div className="w-[90%] flex justify-end items-center pt-4">
+        <Image src={Logo} alt="logo" className="lg:w-[8%]  w-[30%]" />
+      </div>
+
+      <div className='mt-4 pt-10 border-t border-[#363636] w-[95%] flex flex-col justify-center items-center'>
+
+      </div>
+      
         <p className="text-center text-[14px] text-white mb-4">Are you a</p>
       {loading && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">

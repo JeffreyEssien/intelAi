@@ -13,11 +13,11 @@ export default function Footer() {
 
     const pathname = usePathname();
 
-    const noFooterPaths = ["/login", "/connect" , "/persona", "/communitytypeselector", "/successfullogin"]
+    const noFooterPaths = ["/login", "/login/connect", "/login/persona", "/login/communitytypeselector", "/successfullogin", "/communitydashboard", "/community_dashboard_after_initial_training", "/community_ai_training", "/intel_ai_workspace"]
 
     if (noFooterPaths.includes(pathname)) {
         return null;
-      }
+    }
 
     const style: React.CSSProperties = {
         background:
