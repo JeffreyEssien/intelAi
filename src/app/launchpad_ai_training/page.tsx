@@ -50,8 +50,6 @@ export default function LauuchpadAiTraining() {
     };
 
 
-
-
     return (
         <div className="bg-[#0D0D0D] h-screen w-full rounded-[20px]">
             <div className="flex flex-row ">

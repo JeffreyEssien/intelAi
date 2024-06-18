@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react"
+import Link from "next/link"
 
 // interface ModalProps {
 //     isOpen: boolean;
@@ -18,6 +19,7 @@ export default function IntelAiWorkspaceModal() {
 
     return(
         <div>
+            {isModalOpen && (
             <div className="fixed inset-0 flex items-center justify-center z-50">
                 <div className="absolute inset-0 bg-black opacity-60"></div>
                 <div className="relative bg-[#1a1a1a] rounded-2xl p-8 w-96 flex flex-col">
@@ -36,6 +38,7 @@ export default function IntelAiWorkspaceModal() {
                     </button>
                 </div>
             </div>
+            )}
         </div>
     )
 }

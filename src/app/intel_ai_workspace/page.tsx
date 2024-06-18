@@ -5,6 +5,7 @@ import Image from "next/image";
 import LoadingImg from "../landingpages/images/Group 92718.png";
 import IntelAiImg from "../landingpages/images/Intel AI.png";
 import IntelAiWorkspaceModal from "../intel_ai_workspace_modal/page";
+import TelegramSimulation from "../telegram_simulation/page";
 import Sidebar from "@/components/sidebar/page";
 import { FaTelegramPlane } from "react-icons/fa";
 import { BsChevronDown } from "react-icons/bs";
@@ -21,6 +22,8 @@ export default function IntelAiWorkspace() {
     const [isEditingName, setIsEditingName] = useState(true);
     const [isEditingCategory, setIsEditingCategory] = useState(true);
     const [isEditingURL, setIsEditingURL] = useState(true);
+    const [isSimulationModalOpen, setSimulationModalOpen] = useState(false);
+
 
     const handleToggle = () => {
         setIsOn((prevState) => !prevState);
@@ -53,24 +56,24 @@ export default function IntelAiWorkspace() {
     };
 
     // Use useEffect to only show the modal once when navigating to the page
-    // useEffect(() => {
-    //     const hasVisitedBefore = sessionStorage.getItem('hasVisitedBefore');
-    //     if (!hasVisitedBefore) {
-    //         setIsModalOpen(true);
-    //         sessionStorage.setItem('hasVisitedBefore', 'true');
-    //     } else {
-    //         setIsModalOpen(false);
-    //     }
-    // }, []);
+    useEffect(() => {
+        const hasVisitedBefore = sessionStorage.getItem('hasVisitedBefore');
+        if (!hasVisitedBefore) {
+            setIsModalOpen(true);
+            sessionStorage.setItem('hasVisitedBefore', 'true');
+        } else {
+            setIsModalOpen(false);
+        }
+    }, []);
 
-    useEffect(
-        () => {
-          const modalDisplay = localStorage.getItem('modaldisplay');
-          if(!modalDisplay){
-            setIsModalOpen(true)
-          }
-        }, []
-      )
+    // useEffect(
+    //     () => {
+    //       const modalDisplay = localStorage.getItem('modaldisplay');
+    //       if(!modalDisplay){
+    //         setIsModalOpen(true)
+    //       }
+    //     }, []
+    //   )
 
     const handleNameBlur = () => {
         if (projectName.trim() !== '') {
@@ -100,8 +103,15 @@ export default function IntelAiWorkspace() {
         window.location.href = "/telegram_simulation";
     }
 
+    const handleSimulation = () => {
+        setSimulationModalOpen(!isSimulationModalOpen)
+    }
+
     return (
-        <div className="bg-[#0D0D0D] flex flex-row w-full">
+        <div className="bg-[#0D0D0D] flex flex-row w-full min-h-screen h-auto">
+            {isSimulationModalOpen && (
+                <TelegramSimulation />
+            )}
             <Sidebar />
             <div className="flex flex-col bg-[#0D0D0D] w-full">
                 <div className="w-full flex flex-row py-3 items-center gap-3 justify-end pr-5">
@@ -218,7 +228,7 @@ export default function IntelAiWorkspace() {
                                 )}
                             </form>
                         </div>
-                    
+
 
                         <div className="w-2/3 bg-[#181818] min-h-screen rounded-[20px] pb-20">
                             <div className="flex flex-row justify-between p-4 bg-[#1B1B1B] rounded-[20px]">
@@ -233,15 +243,15 @@ export default function IntelAiWorkspace() {
                             <div className="px-10 mt-14">
                                 {formSubmitted ? (
                                     <div className="flex flex-col">
-                                    <div className="flex flex-col border-l-4 space-y-10 border-[#03FFA3] pl-2">
-                                        <Image src={IntelAiImg} alt="logo" className="w-[10%]"/>
-                                        <p className="text-white">GetEquity is a dynamic platform that democratizes access to private capital investments, providing a marketplace for investors of all types to engage in private company investments across diverse markets like the Middle East, Africa, and Europe. </p>
-                                        <p>The company focuses on aggregating investments across various asset classes, making investment opportunities more accessible for SEC-accredited providers. Founded in 2020 and based in Lagos, Nigeria, GetEquity operates as a private marketplace facilitating the trade of digital securities and assets securely and privately. Their innovative approach allows users to fund their wallets easily, invest in vetted investment products, buy and sell shares, and even gift equity to family and friends.</p>
-                                        <p>GetEquity is a dynamic platform that democratizes access to private capital investments, providing a marketplace for investors of all types to engage in private company investments across diverse markets like the Middle East, Africa, and Europe. </p>
-                                        <p>The company focuses on aggregating investments across various asset classes, making investment opportunities more accessible for SEC-accredited providers. Founded in 2020 and based in Lagos, Nigeria, GetEquity operates as a private marketplace facilitating the trade of digital securities and assets securely and privately. Their innovative approach allows users to fund their wallets easily, invest in vetted investment products, buy and sell shares, and even gift equity to family and friends.</p>
-                                    </div>
+                                        <div className="flex flex-col border-l-4 space-y-10 border-[#03FFA3] pl-2">
+                                            <Image src={IntelAiImg} alt="logo" className="w-[10%]" />
+                                            <p className="text-white">GetEquity is a dynamic platform that democratizes access to private capital investments, providing a marketplace for investors of all types to engage in private company investments across diverse markets like the Middle East, Africa, and Europe. </p>
+                                            <p>The company focuses on aggregating investments across various asset classes, making investment opportunities more accessible for SEC-accredited providers. Founded in 2020 and based in Lagos, Nigeria, GetEquity operates as a private marketplace facilitating the trade of digital securities and assets securely and privately. Their innovative approach allows users to fund their wallets easily, invest in vetted investment products, buy and sell shares, and even gift equity to family and friends.</p>
+                                            <p>GetEquity is a dynamic platform that democratizes access to private capital investments, providing a marketplace for investors of all types to engage in private company investments across diverse markets like the Middle East, Africa, and Europe. </p>
+                                            <p>The company focuses on aggregating investments across various asset classes, making investment opportunities more accessible for SEC-accredited providers. Founded in 2020 and based in Lagos, Nigeria, GetEquity operates as a private marketplace facilitating the trade of digital securities and assets securely and privately. Their innovative approach allows users to fund their wallets easily, invest in vetted investment products, buy and sell shares, and even gift equity to family and friends.</p>
+                                        </div>
 
-                                    <button className="bg-gradient-to-r from-[#03FFA3] to-[#7F56D9] py-2 w-1/3 flex flex-row items-center justify-center rounded-[66px] mx-auto gap-2 my-6" onClick={handleTelegramNavigation}><FaTelegramPlane /> Simulate on Telegram</button>
+                                        <button  className="bg-gradient-to-r from-[#03FFA3] to-[#7F56D9] py-2 w-1/3 flex flex-row items-center justify-center rounded-[66px] mx-auto gap-2 my-6" onClick={handleSimulation}><FaTelegramPlane /> Simulate on Telegram</button>
                                     </div>
                                 ) : (
                                     <Image src={LoadingImg} alt="Loader" />

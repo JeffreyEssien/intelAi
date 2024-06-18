@@ -36,7 +36,7 @@ export default function TelegramSimulation() {
     };
 
     return (
-        <div className="flex flex-col items-end">
+        <div className="flex flex-col items-end bg-[#131313] bg-opacity-65 z-10 inset-0 ">
             <div className="bg-[#131313] flex flex-col min-h-screen h-auto w-1/4">
                 <select className="bg-[#1D1D1D] w-1/3 p-4 m-4 rounded-[10px]">
                     <option>Telegram</option>

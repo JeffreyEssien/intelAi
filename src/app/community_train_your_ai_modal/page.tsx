@@ -1,17 +1,33 @@
 "use client"
-import React, { FC } from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-interface ModalProps {
-  onClose: () => void;
-}
+export default function CommunityTrainYourAiModal() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-export default function CommunityTrainYourAiModal(){
-  const [isModalOpen, setIsModalOpen] = useState(true)
+  useEffect(() => {
+    // Check if the modal has been viewed before
+    const hasViewedModal = localStorage.getItem("hasViewedModal");
+    if (!hasViewedModal) {
+      setIsModalOpen(true);
+    }
+  }, []);
 
   const handleModalClose = () => {
-    setIsModalOpen(!isModalOpen)
+    setIsModalOpen(false);
+    // Set the flag in local storage to indicate the modal has been viewed
+    localStorage.setItem("hasViewedModal", "true");
+    window.location.href = "/intel_ai_workspace";
+
+  //   setTimeout(() => {
+  //     localStorage.removeItem("hasViewedModal");
+  //   }, 5000);
+  // };
+  };
+
+  if (!isModalOpen) {
+    return null; // Do not render the modal if it has been viewed
   }
+
 
   return (
     <div>
@@ -26,8 +42,11 @@ export default function CommunityTrainYourAiModal(){
             className="bg-[#FFFFFF] text-black rounded-full px-4 py-2 w-1/2 mx-auto"
             onClick={handleModalClose}
           >
+            {/* <Link href='/intel_ai_workspace'> */}
             Train your AI now
+            {/* </Link> */}
           </button>
+         
         </div>
       </div>
     </div>
