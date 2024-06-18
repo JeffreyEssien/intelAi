@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import Text1 from "../../landingpages/images/Group 56956.png"
 import Text2 from "../../landingpages/images/Group 56957.png"
