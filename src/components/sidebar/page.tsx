@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Logo from '../../app/landingpages/images/Intel AI logo (1) (1) (1).png'
 import { useState } from 'react';
 import { FaPlus } from 'react-icons/fa';
+import Link from 'next/link';
+
 
 
 export default function Sidebar() {
@@ -29,7 +31,7 @@ export default function Sidebar() {
                 <Image src={Logo} alt='yes' className='w-[45%]' />
             </div>
             <div className='items flex flex-col space-y-20'>
-                <div className='flex flex-row items-center gap-3'>
+                <Link href='/communitydashboard'><div className='flex flex-row items-center gap-3'>
                     <p className='pl-14'><svg width="22" height="22" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.75 4.06667V2.35C1.75 2.01863 2.01863 1.75 2.35 1.75H5.23333C5.5647 1.75 5.83333 2.01863 5.83333 2.35V4.06667C5.83333 4.39804 5.5647 4.66667 5.23333 4.66667H2.35C2.01863 4.66667 1.75 4.39804 1.75 4.06667Z" stroke="white" />
                         <path d="M8.16699 11.6507V9.93398C8.16699 9.60261 8.43562 9.33398 8.76699 9.33398H11.6503C11.9817 9.33398 12.2503 9.60261 12.2503 9.93398V11.6507C12.2503 11.982 11.9817 12.2507 11.6503 12.2507H8.76699C8.43562 12.2507 8.16699 11.982 8.16699 11.6507Z" stroke="white" />
@@ -39,7 +41,8 @@ export default function Sidebar() {
                     </p>
                     <p>Dashboard</p>
                 </div>
-                <div className='flex flex-row items-center gap-3'>
+                </Link>
+                <Link href='/community_ai_training'><div className='flex flex-row items-center gap-3'>
                     <p className='pl-14'><svg width="22" height="22" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.33301 9.33268L9.33301 4.66602" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M7 9.33268L7 6.41602" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" />
@@ -49,6 +52,7 @@ export default function Sidebar() {
                     </p>
                     <p className='text-[#707070]'>AI Community Workspace</p>
                 </div>
+                </Link>
                 <div className='flex flex-row items-center gap-3'>
                     <p className='pl-14'><svg width="22" height="22" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8.66296 0.529297H10.3496L6.66463 4.74138L11 10.4719H7.60558L4.94725 6.99592L1.90483 10.4719H0.21725L4.15892 5.9665L0 0.529755H3.48058L5.88363 3.70692L8.66296 0.529297ZM8.07125 9.46267H9.00579L2.97275 1.48584H1.96992L8.07125 9.46267Z" fill="url(#paint0_linear_2600_20153)" />

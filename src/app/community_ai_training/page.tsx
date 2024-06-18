@@ -1,10 +1,10 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Sidebar from "@/components/sidebar/page";
 import { FaTelegramPlane } from "react-icons/fa";
-import CommunityTrainYourAiModal from '../modals/community_train_your_ai_modal/page';
+import CommunityTrainYourAiModal from '../community_train_your_ai_modal/page';
 
 interface TrainingData {
     id: number;
@@ -43,8 +43,19 @@ export default function CommunityAiTraining() {
         'bg-[#0A0908]', // Even lighter gray
       ];
       
-      const [isModalOpen, setIsModalOpen] = useState(true);
+      const [isModalOpen, setIsModalOpen] = useState(false);
       const [isOn, setIsOn] = useState(false);
+      const [isCommunityModalOpen, setCommunityModalOpen] = useState(false);
+
+      useEffect(
+        () => {
+          const modalDisplay = localStorage.getItem('modaldisplay');
+          if(!modalDisplay){
+            setIsModalOpen(true)
+          }
+        }, []
+      )
+
 
       const handleToggle = () => {
         setIsOn((prevState) => !prevState);
@@ -52,9 +63,9 @@ export default function CommunityAiTraining() {
 
       const handleModalClose = () => {
         setIsModalOpen(false);
-        window.location.href = "/intel_ai_workspace";
-
+        localStorage.setItem('modaldisplay', 'true')
       }
+
 
     return (
         <div className="bg-[#0D0D0D] h-screen w-full rounded-[20px]">
@@ -122,8 +133,9 @@ export default function CommunityAiTraining() {
 
 
             </div>
-
-            <CommunityTrainYourAiModal isOpen={isModalOpen} onClose={handleModalClose} />
+            {isModalOpen && (
+            <CommunityTrainYourAiModal  />
+          )}
         </div>
     )
 }

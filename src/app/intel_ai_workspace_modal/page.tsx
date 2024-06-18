@@ -1,15 +1,20 @@
 "use client"
+import { useState } from "react"
 
-interface ModalProps {
-    isOpen: boolean;
-    onClose: () => void;
-}
+// interface ModalProps {
+//     isOpen: boolean;
+//     onClose: () => void;
+// }
 
-export type { ModalProps };
+// export type { ModalProps };
 
-export default function IntelAiWorkspaceModal({ isOpen, onClose }: ModalProps) {
+export default function IntelAiWorkspaceModal() {
 
-    if (!isOpen) return null;
+    const [isModalOpen, setIsModalOpen] = useState(true)
+
+  const handleModalClose = () => {
+    setIsModalOpen(!isModalOpen)
+  }
 
     return(
         <div>
@@ -25,7 +30,7 @@ export default function IntelAiWorkspaceModal({ isOpen, onClose }: ModalProps) {
                     </div>
                     <button
                         className="bg-[#FFFFFF] text-black rounded-full px-4 py-2 w-2/3 mx-auto text-[12px]"
-                        onClick={onClose}
+                        onClick={handleModalClose}
                     >
                         Get Started with AI Training
                     </button>

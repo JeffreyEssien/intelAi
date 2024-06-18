@@ -9,8 +9,9 @@ export default function ContentWrapper() {
   const pathname = usePathname();
 
   // List of paths where Navbar should not be displayed
-  const noNavbarPaths = ["/login", "/login/connect", "/login/persona", "/login/communitytypeselector", "/successfullogin", "/communitydashboard", "/community_dashboard_after_initial_training", "/community_ai_training", "/intel_ai_workspace"];
-  const noNavbarMobilePaths = ["/login" , "/login/connect", "/login/persona", "/login/communitytypeselector", "/successfullogin", "/communitydashboard", "/community_dashboard_after_initial_training", "/community_ai_training", "/intel_ai_workspace"] 
+  const noNavbarPaths = ["/login", "/login/connect", "/login/persona", "/login/communitytypeselector", "/successfullogin", "/communitydashboard", "/community_dashboard_after_initial_training", "/community_ai_training", "/intel_ai_workspace", "/telegram_simulation", "/launchpad_ai_training"];
+  const noNavbarMobilePaths = ["/login" , "/login/connect", "/login/persona", "/login/communitytypeselector", "/successfullogin", "/communitydashboard", "/community_dashboard_after_initial_training", "/community_ai_training", "/intel_ai_workspace", "/telegram_simulation", "/launchpad_ai_training"] 
+
   const noFooterPaths = ["/login", "/connect" , "/persona"]
 
   if (noNavbarPaths.includes(pathname)) {
