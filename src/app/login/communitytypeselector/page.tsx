@@ -14,14 +14,9 @@ export default function CommunityTypeSelector() {
   };
 
   const handleNextClick = () => {
-    if (selected) {
-      setLoading(true);
-      setTimeout(() => {
+    
         window.location.href = "/successfullogin";
-      }, 1000); // Simulating a 1-second loader
-    } else {
-      alert("Please select a category before proceeding.");
-    }
+    
   };
 
   return (
@@ -42,7 +37,7 @@ export default function CommunityTypeSelector() {
         <div
           className={`border-b border-[#1E1E1E] py-3 px-8 cursor-pointer ${selected === "Launchpad" ? "border-white" : "hover:border hover:border-white"
             }`}
-          onClick={() => handleDivClick("Launchpad")}
+            onClick={handleNextClick}
         >
           <p className="text-[14px] text-white">Launchpad</p>
           <p className="text-[#4D4D4D] w-[90%]">
@@ -53,7 +48,7 @@ export default function CommunityTypeSelector() {
         <div
           className={`border-b border-[#1E1E1E] py-3 px-8 cursor-pointer ${selected === "Token Project" ? "border-white" : "hover:border hover:border-white"
             }`}
-          onClick={() => handleDivClick("Token Project")}
+            onClick={handleNextClick}
         >
           <p className="text-[14px] text-white">⁠Token Project</p>
           <p className="text-[#4D4D4D] w-[90%]">
@@ -64,7 +59,7 @@ export default function CommunityTypeSelector() {
         <div
           className={`py-3 px-8 cursor-pointer ${selected === "Memecoin Project" ? "border-white" : "hover:border hover:border-white"
             }`}
-          onClick={() => handleDivClick("Memecoin Project")}
+          onClick={handleNextClick}
         >
           <p className="text-[14px] text-white">⁠Memecoin Project</p>
           <p className="text-[#4D4D4D] w-[90%]">
@@ -73,7 +68,7 @@ export default function CommunityTypeSelector() {
           </p>
         </div>
       </div>
-      <button
+      {/* <button
         className="mt-5 bg-white text-black text-center py-3 lg:w-[15%] w-[80%] rounded-[24px] text-[12px]"
         onClick={handleNextClick}
       >
@@ -104,7 +99,7 @@ export default function CommunityTypeSelector() {
         ) : (
           "Next"
         )}
-      </button>
+      </button> */}
     </div>
   );
 }

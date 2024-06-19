@@ -7,6 +7,9 @@ import { FaTelegramPlane } from "react-icons/fa";
 import CommunityTrainYourAiModal from '../community_train_your_ai_modal/page';
 import Link from 'next/link'
 import TelegramSimulation from '../telegram_simulation/page';
+import UpcomingAnouncementModal from '../upcoming_announcements_modals/page';
+import CommunityEngagement from '../community_dashboard_after_initial_training/community_dasboard_engagement/page';
+import CommunityEngagementModal from '../community_engagement_modals/page';
 
 interface TrainingData {
   id: number;
@@ -48,6 +51,8 @@ export default function CommunityAiTraining() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isOn, setIsOn] = useState(false);
   const [isSimulationModalOpen, setSimulationModalOpen] = useState(false);
+  const [showAnouncement, setShowAnouncement] = useState(false);
+  const [showCommunityEngagement, setShowCommunityEnagement] = useState(false)
 
   useEffect(
     () => {
@@ -77,6 +82,22 @@ export default function CommunityAiTraining() {
     setSimulationModalOpen(!isSimulationModalOpen)
   }
 
+  const handleUpcomingAnouncement = () => {
+    setShowAnouncement(!showAnouncement)
+  }
+
+  const handleCommunityEngagement = () => {
+    setShowCommunityEnagement(!showCommunityEngagement)
+  }
+
+  const handleLaunchpadProjectsTraining = () => {
+    window.location.href = '/launchpad_ai_training'
+  }
+  
+  const handleApeTrainingTerminal = () => {
+    window.location.href = '/community_ai_training'
+  }
+
 
   return (
     <div className="bg-[#0D0D0D] min-h-screen w-full rounded-[20px]">
@@ -86,6 +107,13 @@ export default function CommunityAiTraining() {
       {isModalOpen && (
         <CommunityTrainYourAiModal />
       )}
+      {showAnouncement && (
+        <UpcomingAnouncementModal />
+      )}
+      {showCommunityEngagement && (
+        <CommunityEngagementModal />
+      )}
+
       <div className="flex flex-row ">
         <Sidebar />
         <div className="flex flex-col items-center w-full">
@@ -104,22 +132,22 @@ export default function CommunityAiTraining() {
           </div>
           <div className="bg-[#141414] rounded-[20px] min-h-screen w-full flex flex-col">
             <div className="flex flex-row mt-5 ml-5 gap-3">
-              <button className="text-white text-[14px]">Ape Terminal training</button>
-              <button className="text-[#4D4D4D] text-[14px]">Launchpad projects training</button>
+              <button className="text-white text-[14px]" onClick={handleApeTrainingTerminal}>Ape Terminal training</button>
+              <button className="text-[#4D4D4D] text-[14px]" onClick={handleLaunchpadProjectsTraining}>Launchpad projects training</button>
             </div>
 
             <div className="mt-20 flex flex-col w-[80%] mx-auto">
               <p className="text-center text-[24px]">What's happening in your Community?</p>
 
-              <ul className="flex flex-row w-full justify-between mt-5 ">
-                <li className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3">Upcoming Announcements</li>
-                <li className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3">Community Engagement</li>
-                <li className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3">Other Information</li>
-              </ul>
+              <div className="flex flex-row w-full justify-between mt-5 ">
+                <button className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3" onClick={handleUpcomingAnouncement}>Upcoming Announcements</button>
+                <button className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3" onClick={handleCommunityEngagement}>Community Engagement</button>
+                <button className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3">Other Information</button>
+              </div>
               <button onClick={handleSimulation} className="bg-gradient-to-r from-[#03FFA3] to-[#7F56D9] w-[222px] mx-auto mt-8 py-2  text-white rounded-[21px] flex flex-row items-center gap-2 justify-center"><span className="text-center"><FaTelegramPlane /></span>Simulate on Telegram</button>
             </div>
 
-            <div className='bg-[#131313] p-8 rounded-2xl w-full'>
+            <div className='bg-[#131313] p-8 w-[80%] mx-auto  rounded-2xl'>
               <h2 className="text-white text-2xl mb-5">Training History</h2>
               <h3 className="text-gray-400 mb-5">Recent Training</h3>
               <div className="overflow-x-auto">
