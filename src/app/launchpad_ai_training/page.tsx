@@ -73,19 +73,22 @@ export default function LauuchpadAiTraining() {
                     </div>
                     <div className="bg-[#141414] rounded-[20px] min-h-screen w-full flex flex-col">
                         <div className="flex flex-row mt-5 ml-5 gap-3">
-                            <button className="text-white text-[14px]" onClick={handleApeTrainingTerminal}>Ape Terminal training</button>
-                            <button className="text-[#4D4D4D] text-[14px]">Launchpad projects training</button>
+                            <button className=" text-[14px] text-[#4D4D4D]" onClick={handleApeTrainingTerminal}>Ape Terminal training</button>
+                            <button className="text-white text-[14px]">Launchpad projects training</button>
                         </div>
 
                         <div className="mt-20 flex flex-col w-[80%] mx-auto items-center">
                             <p className="text-center text-[24px]">What’s new with your launchpad projects?</p>
 
                             <div className="flex flex-row w-[80%] justify-around mt-5 ">
-                                <div className="bg-gradient-to-r from-[#03FFA3] to-[#7F56D9] rounded-3xl p-[1px]">
-                                    <li className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3 bg-gradient-to-r from-[#3A3A3A] to-[#000000]">Upcoming Project Listings</li>
+                                <div className="hover:bg-gradient-to-r from-[#03FFA3] to-[#7F56D9] rounded-3xl p-[1px]">
+                                    <li className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3 hover:bg-gradient-to-r from-[#3A3A3A] to-[#000000]">Upcoming Project Listings</li>
                                 </div>
 
-                                <li className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3">Update Previously Listed Projects</li>
+                                <div className="hover:bg-gradient-to-r from-[#03FFA3] to-[#7F56D9] rounded-3xl p-[1px]">
+                                    <li className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3 hover:bg-gradient-to-r from-[#3A3A3A] to-[#000000]">Update  Previously Listed Projects</li>
+                                </div>
+
 
                             </div>
 

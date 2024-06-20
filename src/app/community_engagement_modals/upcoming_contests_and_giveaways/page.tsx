@@ -5,7 +5,7 @@ import { AiOutlineSend } from "react-icons/ai";
 
 import CalendarWidget from "@/components/calender_widget/page";
 
-export default function FundraisingActivity() {
+export default function UpcomingContestsAndGiveaways() {
 
     const [showCalendar, setShowCalendar] = useState(false)
 
@@ -14,9 +14,9 @@ export default function FundraisingActivity() {
     }
 
     return (
-        <div className="absolute flex items-center justify-center bg-[#0A0908] bg-opacity-50 w-full h-screen z-20">
+        <div className=" flex items-center justify-center bg-[#0A0908] bg-opacity-50 w-full h-screen z-20">
             <div className="bg-[#101010] rounded-[20px] w-1/3">
-                <p className="p-5 border-b border-[#181818]">Fundraising Activity Announcement</p>
+                <p className="p-5 border-b border-[#181818]">Upcoming Contests and Giveaways</p>
                 <div className="bg-[#131313] flex flex-col items-center px-8">
                     <p className="italic text-[14px] pt-4 mb-2">When do you want to inform your community about this information?</p>
                     <select className="bg-[#2A2A2A] p-4 rounded-[16px] w-full">Today
@@ -30,12 +30,12 @@ export default function FundraisingActivity() {
                     )}
                 </div>
                 <div className="bg-[#1B1B1B] px-10 rounded-b-[20px]">
-                    <p className="py-4">Instructions:</p>
-                    <p className="flex flex-col text-[14px] pb-3 ">Provide comprehensive details about upcoming fundraising events stage of the token sale Eg:
-                        <li className="text-[#535353] pl-3">(Private sale, pre-sale, public sale, LBP)</li>
-                        <li className="text-[#535353] pl-3">Key dates of each stage</li>
-                        <li className="text-[#535353] pl-3">Target Amounts</li>
-                        <li className="text-[#535353] pl-3"> And, any special terms or incentives offered.</li>
+                    <p className="py-4 flex items-center">Instructions: <span className="italic">(Type Content or Upload document)</span>  </p>
+                    <p className="flex flex-col text-[14px] pb-3 ">Please provide detailed information about the Upcoming Contests and GiveawaysInclude the:
+                        <li className="text-[#535353] pl-3">Theme or topic of the contest/giveaway.</li>
+                        <li className="text-[#535353] pl-3">Specify eligible participants of the contest/giveaway.</li>
+                        <li className="text-[#535353] pl-3">Ensure your entry aligns with the theme/topic of the contest/giveaway & deadline</li>
+                        <li className="text-[#535353] pl-3"> Describe the prize(s) for the contest/giveaway, including any details regarding the number of winners, and prize value.</li>
                     </p>
                 </div>
 

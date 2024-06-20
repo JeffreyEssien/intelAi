@@ -5,7 +5,7 @@ import { AiOutlineSend } from "react-icons/ai";
 
 import CalendarWidget from "@/components/calender_widget/page";
 
-export default function FundraisingActivity() {
+export default function NewExchangeListings() {
 
     const [showCalendar, setShowCalendar] = useState(false)
 
@@ -16,7 +16,7 @@ export default function FundraisingActivity() {
     return (
         <div className="absolute flex items-center justify-center bg-[#0A0908] bg-opacity-50 w-full h-screen z-20">
             <div className="bg-[#101010] rounded-[20px] w-1/3">
-                <p className="p-5 border-b border-[#181818]">Fundraising Activity Announcement</p>
+                <p className="p-5 border-b border-[#181818]">New Exchange Listings</p>
                 <div className="bg-[#131313] flex flex-col items-center px-8">
                     <p className="italic text-[14px] pt-4 mb-2">When do you want to inform your community about this information?</p>
                     <select className="bg-[#2A2A2A] p-4 rounded-[16px] w-full">Today
@@ -29,17 +29,19 @@ export default function FundraisingActivity() {
                         <CalendarWidget />
                     )}
                 </div>
+                <div className="bg-[#131313]  ">
                 <div className="bg-[#1B1B1B] px-10 rounded-b-[20px]">
                     <p className="py-4">Instructions:</p>
-                    <p className="flex flex-col text-[14px] pb-3 ">Provide comprehensive details about upcoming fundraising events stage of the token sale Eg:
-                        <li className="text-[#535353] pl-3">(Private sale, pre-sale, public sale, LBP)</li>
-                        <li className="text-[#535353] pl-3">Key dates of each stage</li>
-                        <li className="text-[#535353] pl-3">Target Amounts</li>
-                        <li className="text-[#535353] pl-3"> And, any special terms or incentives offered.</li>
+                    <p className="flex flex-col text-[14px] pb-3 ">Announce a new exchange listing. Include:
+                        <li className="text-[#535353] pl-3">Name of the exchange.</li>
+                        <li className="text-[#535353] pl-3">The date of listing.</li>
+                        <li className="text-[#535353] pl-3">And, expected benefits to investors.</li>
                     </p>
                 </div>
-
-                <div className="bg-[#131313]  pt-10 px-5 border-b border-[#131313]">
+                </div>
+                    
+                    
+                <div className="bg-[#131313]  pt-10 px-4 border-b border-[#131313]">
                     <textarea className="bg-[#0D0D0D] focus:outline-none border-none w-full h-[100px] rounded-t-[20px] flex items-end p-4 text-[#7B7B7B]" placeholder="Add more information"/>
                     <div className="w-full px-4 flex justify-between border-t py-3 border-[#363636] bg-[#0D0D0D] rounded-b-[20px]">
                         <p><svg width="24" height="24" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -68,7 +68,6 @@ export default function CommunityAiTraining() {
     window.location.href = "/community_train_your_ai_modal";
   }
 
-
   const handleToggle = () => {
     setIsOn((prevState) => !prevState);
   };
@@ -108,10 +107,16 @@ export default function CommunityAiTraining() {
         <CommunityTrainYourAiModal />
       )}
       {showAnouncement && (
+        <div className='absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 h-full'>
+          <button onClick={handleUpcomingAnouncement} className='absolute top-10 left-10'>close</button>
         <UpcomingAnouncementModal />
+        </div>
       )}
       {showCommunityEngagement && (
-        <CommunityEngagementModal />
+        <div className='absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 h-full'>
+        <button onClick={handleCommunityEngagement} className='absolute top-10 left-10 '>close</button>
+      <CommunityEngagementModal />
+      </div>
       )}
 
       <div className="flex flex-row ">
