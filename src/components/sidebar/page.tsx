@@ -66,7 +66,7 @@ export default function Sidebar() {
                         )}
                     </div>
                     </Link>
-                    <Link href='/community_ai_training'><div className='flex flex-row items-center gap-3 justify-center'>
+                    <Link href='/intel_ai_workspace'><div className='flex flex-row items-center gap-3 justify-center'>
                         <p className={sidebarWidthCollapsed === '20%' ? 'text-[#707070] text-[14px] pl-14' : ' text-[#707070] text-[14px]'}><svg width="22" height="22" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.33301 9.33268L9.33301 4.66602" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" />
                             <path d="M7 9.33268L7 6.41602" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" />
@@ -159,7 +159,7 @@ export default function Sidebar() {
                     <p>Dashboard</p>
                 </div>
                 </Link>
-                <Link href='/community_ai_training'><div className='flex flex-row items-center gap-3'>
+                <Link href='/intel_ai_workspace'><div className='flex flex-row items-center gap-3'>
                     <p className='pl-14'><svg width="22" height="22" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.33301 9.33268L9.33301 4.66602" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M7 9.33268L7 6.41602" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" />
