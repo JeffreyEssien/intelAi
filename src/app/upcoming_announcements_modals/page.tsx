@@ -9,6 +9,8 @@ import MilestoneUpdates from "./milestone_updates/page"
 import RoadmapUpdates from "./roadmap_updates/page"
 import NewExchangeListings from "./new_exchange_listings/page"
 import SecurityIncidentReport from "./security_incident_report/page"
+import { FaCircleChevronLeft } from "react-icons/fa6"
+import { FaChevronLeft } from "react-icons/fa"
 
 
 export default function UpcomingAnouncementModal() {
@@ -93,28 +95,52 @@ export default function UpcomingAnouncementModal() {
                 </div>
             </div>
             {showPartnershipAnnouncement && (
+                <div className="absolute w-full">
+                    <button className="absolute top-20 left-20 text-xl" onClick={handlePartnershipAnnouncement}><FaChevronLeft /></button>
                 <PartnershipAnnouncement />
+                </div>
             )}
             {showPlatformFeatureUpdates && (
+                <div className="absolute w-full">
+                    <button className="absolute top-20 left-20 text-xl" onClick={handlePlatformFeaturesUpdates}><FaChevronLeft /></button>
                 <PlatformFeatureUpdates />
+                </div>
             )}
             {showFundraisingActivity && (
+                <div className="absolute w-full">
+                    <button className="absolute top-20 left-20 text-xl" onClick={handleFundraisingActivity}><FaChevronLeft /></button>
                 <FundraisingActivity />
+                </div>
             )}
             {showScheduledPlatformMaintenance && (
+                <div className="absolute w-full">
+                    <button className="absolute top-20 left-20 text-xl" onClick={handleSheduledPlatformMaintenance}><FaChevronLeft /></button>
                 <ScheduledPlatformMaintenance />
+                </div>
             )}
             {showMilestoneUpdates && (
+                <div className="absolute w-full">
+                    <button className="absolute top-20 left-20 text-xl" onClick={handleMilestoneUpdates}><FaChevronLeft /></button>
                 <MilestoneUpdates />
+                </div>
             )}
             {showRoadmapUpdates && (
+                <div className="absolute w-full">
+                    <button className="absolute top-20 left-20 text-xl" onClick={handleRoadmapUpdates}><FaChevronLeft /></button>
                 <RoadmapUpdates />
+                </div>
             )}
             {showNewExchangeListings && (
+                <div className="absolute w-full">
+                    <button className="absolute top-20 left-20 text-xl" onClick={handleNewExchangeListings}><FaChevronLeft /></button>
                 <NewExchangeListings />
+                </div>
             )}
             {showSecurityIncidentReport && (
+                <div className="absolute w-full">
+                    <button className="absolute top-20 left-20 text-xl" onClick={handleSecurityIncidentReport}><FaChevronLeft /></button>
                 <SecurityIncidentReport />
+                </div>  
             )}
         </div>
     )

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Sidebar from "@/components/sidebar/page";
-import { FaTelegramPlane } from "react-icons/fa";
+import { FaChevronLeft, FaTelegramPlane } from "react-icons/fa";
 import CommunityTrainYourAiModal from '../community_train_your_ai_modal/page';
 import Link from 'next/link'
 import TelegramSimulation from '../telegram_simulation/page';
@@ -108,13 +108,13 @@ export default function CommunityAiTraining() {
       )}
       {showAnouncement && (
         <div className='absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 h-full'>
-          <button onClick={handleUpcomingAnouncement} className='absolute top-10 left-10'>close</button>
+          <button onClick={handleUpcomingAnouncement} className='absolute top-10 left-10 text-xl'><FaChevronLeft /></button>
         <UpcomingAnouncementModal />
         </div>
       )}
       {showCommunityEngagement && (
         <div className='absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 h-full'>
-        <button onClick={handleCommunityEngagement} className='absolute top-10 left-10 '>close</button>
+        <button onClick={handleCommunityEngagement} className='absolute top-10 left-10  text-xl'><FaChevronLeft /></button>
       <CommunityEngagementModal />
       </div>
       )}

@@ -14,7 +14,7 @@ export default function PartnershipAnnouncement() {
     }
 
     return (
-        <div className="absolute flex items-center justify-center bg-[#0A0908] bg-opacity-50 w-full h-screen z-20">
+        <div className=" flex items-center justify-center bg-[#0A0908] bg-opacity-50 w-full h-screen z-20">
             <div className="bg-[#101010] rounded-[20px] w-1/3">
                 <p className="p-5 border-b border-[#181818]">Partnership Announcement</p>
                 <div className="bg-[#131313] flex flex-col items-center px-8">

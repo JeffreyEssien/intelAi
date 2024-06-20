@@ -5,7 +5,7 @@ import { AiOutlineSend } from "react-icons/ai";
 
 import CalendarWidget from "@/components/calender_widget/page";
 
-export default function RoadmapUpdates() {
+export default function UpcomingCommnunityAma() {
 
     const [showCalendar, setShowCalendar] = useState(false)
 
@@ -16,7 +16,7 @@ export default function RoadmapUpdates() {
     return (
         <div className=" flex items-center justify-center bg-[#0A0908] bg-opacity-50 w-full h-screen z-20">
             <div className="bg-[#101010] rounded-[20px] w-1/3">
-                <p className="p-5 border-b border-[#181818]">Roadmap Updates</p>
+                <p className="p-5 border-b border-[#181818]">Upcoming Community AMA</p>
                 <div className="bg-[#131313] flex flex-col items-center px-8">
                     <p className="italic text-[14px] pt-4 mb-2">When do you want to inform your community about this information?</p>
                     <select className="bg-[#2A2A2A] p-4 rounded-[16px] w-full">Today
@@ -29,19 +29,17 @@ export default function RoadmapUpdates() {
                         <CalendarWidget />
                     )}
                 </div>
-                <div className="bg-[#131313]  ">
                 <div className="bg-[#1B1B1B] px-10 rounded-b-[20px]">
-                    <p className="py-4">Instructions:</p>
-                    <p className="flex flex-col text-[14px] pb-3 ">Update the project's roadmap. Include:
-                        <li className="text-[#535353] pl-3">New goals.</li>
-                        <li className="text-[#535353] pl-3">Revised timelines</li>
-                        <li className="text-[#535353] pl-3">And, the reasons for these updates.</li>
+                    <p className="py-4 flex items-center">Instructions: <span className="italic">(Type Content or Upload document)</span>  </p>
+                    <p className="flex flex-col text-[14px] pb-3 ">Please provide detailed information about the Upcoming Contests and GiveawaysInclude the:
+                        <li className="text-[#535353] pl-3">Specify the date & time of the AMA..</li>
+                        <li className="text-[#535353] pl-3">Introduce the guest(s) and provide a brief background or bio, if applicable.</li>
+                        <li className="text-[#535353] pl-3">Specify how participants can submit their questions, e.g., comment on the AMA thread, use a specific hashtag, etc.</li>
+                        <li className="text-[#535353] pl-3"> Specify the guidelines for participants on questions and discussions during the AMA session.</li>
                     </p>
                 </div>
-                </div>
-                    
-                    
-                <div className="bg-[#131313]  pt-10 px-4 border-b border-[#131313]">
+
+                <div className="bg-[#131313]  pt-10 px-5 border-b border-[#131313]">
                     <textarea className="bg-[#0D0D0D] focus:outline-none border-none w-full h-[100px] rounded-t-[20px] flex items-end p-4 text-[#7B7B7B]" placeholder="Add more information"/>
                     <div className="w-full px-4 flex justify-between border-t py-3 border-[#363636] bg-[#0D0D0D] rounded-b-[20px]">
                         <p><svg width="24" height="24" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
