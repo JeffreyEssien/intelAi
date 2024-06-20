@@ -59,8 +59,10 @@ export default function TelegramSimulation() {
                     <button onClick={handleClose} className="absolute top-4 right-4 text-white">
                         <AiOutlineClose size={18} />
                     </button>
-                    <div className="absolute top-4 right-16 text-white">
-                        Uses left: {15 - useCount} / 15
+                    <div className="absolute top-4 right-16 text-white bg-[#131313] p-4">
+                        <p className='flex items-center text-[12px] text-[#858585]'>
+                        <span className='text-white'>  {15 - useCount}</span> / 15  prompts
+                        </p>
                     </div>
                     <select className="bg-[#1D1D1D] w-1/3 p-4 m-4 rounded-[10px]">
                         <option>Telegram</option>

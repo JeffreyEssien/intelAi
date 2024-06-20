@@ -129,8 +129,8 @@ export default function CommunityAiTraining() {
             </div>
             <div className="w-1/5 flex flex-row items-center gap-5 ">
               <p className="text-[20px]">Co-pilot</p>
-              <div onClick={handleToggle} className={`w-[54px] h-[18px] flex items-center bg-[#545454] rounded-full p-1 cursor-pointer ${isOn ? '' : 'bg-white'}`}>
-                <div className={`bg-white w-[14px] h-[14px] rounded-full shadow-md transform duration-300 ease-in-out ${isOn ? 'translate-x-8 bg-green-500' : ''}`}></div>
+              <div onClick={handleToggle} className={`w-[54px] h-[18px] flex items-center bg-[#545454] rounded-full p-1 cursor-pointer ${isOn ? '' : ''}`}>
+                <div className={` w-[14px] h-[14px] rounded-full shadow-md transform duration-300 ease-in-out ${isOn ? 'translate-x-8 bg-green-500' : 'bg-white'}`}></div>
               </div>
               {isOn ? <p>on</p> : <p>off</p>}
             </div>
