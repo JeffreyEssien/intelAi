@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Logo from '../../landingpages/images/Intel AI logo (1) (1) (1).png'
+import Link from "next/link";
 
 export default function Persona() {
   const [loading, setLoading] = useState(false);
@@ -11,7 +12,7 @@ export default function Persona() {
     setLoading(true);
     setTimeout(() => {
       window.location.href = "/";
-    }, 1000); // Wait for 1 second before redirecting
+    }, 1000); 
   };
 
 // redirecting to the community category selector page
@@ -19,15 +20,15 @@ export default function Persona() {
     setLoading(true);
     setTimeout(() => {
       window.location.href = "/login/communitytypeselector";
-    }, 1000); // Wait for 1 second before redirecting
+    }, 1000); 
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-[#0D0D0D]">
+    <div className="flex flex-col items-center h-screen bg-[#0D0D0D]">
 
-      <div className="w-[90%] flex justify-end items-center pt-4">
+      <Link href='/' className="w-[90%] flex justify-start items-center pt-4">
         <Image src={Logo} alt="logo" className="lg:w-[8%]  w-[30%]" />
-      </div>
+      </Link>
 
       <div className='mt-4 pt-10 border-t border-[#363636] w-[95%] flex flex-col justify-center items-center'>
 
@@ -39,7 +40,7 @@ export default function Persona() {
           <div className="loader"> loading</div>
         </div>
       )}
-      <div className="flex flex-col lg:flex-row lg:w-[50%] w-full items-center gap-4 justify-center mt-10">
+      <div className="flex flex-col  lg:flex-row lg:w-[50%] w-full items-center gap-4 justify-center mt-20">
         <div className="lg:w-2/3 w-4/5 rounded-[40px] hover:bg-gradient-to-l from-[#BDFE1C] to-[#25B8DE] backdrop-filter backdrop-blur-md bg-opacity-50 p-[1px]" onClick={handleCommunityClick}>
           <div className="bg-[#131313] hover:bg-gradient-to-br from-[#1C1C1C] via-[#000000] to-[#000000] cursor-pointer py-14 px-4 rounded-[40px]">
             <p className="my-3">

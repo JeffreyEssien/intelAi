@@ -2,12 +2,7 @@
 import { useState } from "react"
 import Link from "next/link"
 
-// interface ModalProps {
-//     isOpen: boolean;
-//     onClose: () => void;
-// }
 
-// export type { ModalProps };
 
 export default function IntelAiWorkspaceModal() {
 

@@ -46,20 +46,22 @@ export default function Page3() {
             <div className="w-full flex flex-col lg:flex-row justify-around mb-10 gap-14 lg:px-20 px-10">
                 <div className="bg-gradient-to-b from-[#070707] to-[#181818] lg:w-1/3 px-2 pb-10 pt-2 rounded-[20px]">
                 <Image src={Image3} alt="image" className="object-cover"/>
-                <p className="text-white lg:text-[20px] px-4 pt-4 font-medium">Community Owners & Managers</p>
+                <p className="text-white lg:text-[30px] px-4 pt-4 font-medium">Community StakeHolders</p>
                 <p className="text-[16px] px-4 w-[90%]">Intel AI Agents serve as a seamless extension of your team, providing high-quality feedback and engaging interactions that resonate with your community.</p>
                 </div>
 
                 <div className="bg-gradient-to-b from-[#070707] to-[#181818] lg:w-1/3 px-2 pb-10 pt-2 rounded-[20px]">
                 <Image src={Image4} alt="image" className="object-cover"/>
-                <p className="text-white lg:text-[36px] px-4 pt-4 font-medium">KOLs & Influencers</p>
+                <p className="text-white lg:text-[30px] px-4 pt-4 font-medium">KOLs & Influencers</p>
                 <p className="text-[16px] px-4 w-[90%]">Engage your social following and audience on twitter, reddit and others using <span className='font-medium text-white'>Intel<span className='font-bold text-white'>ai</span> </span></p>
                 </div>
 
                 <div className="bg-gradient-to-b from-[#070707] to-[#181818] lg:w-1/3 px-2 pb-10 pt-8 rounded-[20px]">
+                <div className="bg-[#183A4533] pb-2">
                 <Image src={Image6} alt="image" className="object-cover"/>
-                <p className="text-white lg:text-[36px] px-4 pt-4 font-medium">KOLs & Influencers</p>
-                <p className="text-[16px] px-4 w-[90%]">Engage your social following and audience on twitter, reddit and others using <span className='font-medium text-white'>Intel<span className='font-bold text-white'>ai</span> </span></p>
+                </div>
+                <p className="text-white lg:text-[30px] px-4 pt-4 font-medium">Build Custom AI Agents</p>
+                <p className="text-[16px] px-4 w-[90%]">Explore our SDKs and APIs for versatile app development. Our Custom AI Agents Stack provides advanced tools to innovate projects</p>
                 </div>
             </div>
 

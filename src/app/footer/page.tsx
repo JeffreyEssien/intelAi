@@ -13,7 +13,7 @@ export default function Footer() {
 
     const pathname = usePathname();
 
-    const noFooterPaths = ["/login", "/login/connect", "/login/persona", "/login/communitytypeselector", "/successfullogin", "/communitydashboard", "/community_dashboard_after_initial_training", "/community_ai_training", "/intel_ai_workspace", "/telegram_simulation", "/launchpad_ai_training"]
+    const noFooterPaths = ["/login", "/login/connect", "/login/persona", "/login/communitytypeselector", "/successfullogin", "/communitydashboard", "/community_dashboard_after_initial_training", "/community_ai_training", "/intel_ai_workspace", "/telegram_simulation", "/launchpad_ai_training", "/successful_initial_training_modal", "/query_escalation_protocol"]
 
     if (noFooterPaths.includes(pathname)) {
         return null;

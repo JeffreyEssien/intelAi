@@ -10,6 +10,8 @@ import TelegramSimulation from '../telegram_simulation/page';
 import UpcomingAnouncementModal from '../upcoming_announcements_modals/page';
 import CommunityEngagement from '../community_dashboard_after_initial_training/community_dasboard_engagement/page';
 import CommunityEngagementModal from '../community_engagement_modals/page';
+import WelcomeToWorkspaceModal from '../welcome_to_workspace_modal/page';
+import CommunityOtherModals from '../community_other_modals/page';
 
 interface TrainingData {
   id: number;
@@ -53,6 +55,8 @@ export default function CommunityAiTraining() {
   const [isSimulationModalOpen, setSimulationModalOpen] = useState(false);
   const [showAnouncement, setShowAnouncement] = useState(false);
   const [showCommunityEngagement, setShowCommunityEnagement] = useState(false)
+  const [showWelcomeToYourWorkspace, setShowWelcomeToYourWorkspace] = useState(false)
+  const [showOthers, setShowOthers] = useState(false)
 
   useEffect(
     () => {
@@ -62,6 +66,14 @@ export default function CommunityAiTraining() {
       }
     }, []
   )
+
+//   useEffect(
+//     () => {
+//     if(isModalOpen === true) {
+//       setShowWelcomeToYourWorkspace(!showWelcomeToYourWorkspace)
+//     }
+// }
+// ), []
 
   const handleModal = () => {
     setIsModalOpen(!isModalOpen)
@@ -89,6 +101,10 @@ export default function CommunityAiTraining() {
     setShowCommunityEnagement(!showCommunityEngagement)
   }
 
+  const handleOthers = () => {
+    setShowOthers(!showOthers)
+  }
+
   const handleLaunchpadProjectsTraining = () => {
     window.location.href = '/launchpad_ai_training'
   }
@@ -108,7 +124,7 @@ export default function CommunityAiTraining() {
       )}
       {showAnouncement && (
         <div className='absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 h-full'>
-          <button onClick={handleUpcomingAnouncement} className='absolute top-10 left-10 text-xl'><FaChevronLeft /></button>
+          <button onClick={handleUpcomingAnouncement} className='absolute top-20 left-20 text-[30px]'><FaChevronLeft /></button>
         <UpcomingAnouncementModal />
         </div>
       )}
@@ -118,6 +134,12 @@ export default function CommunityAiTraining() {
       <CommunityEngagementModal />
       </div>
       )}
+      {showOthers && (
+        <div className='absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 h-full'>
+        <button onClick={handleOthers} className='absolute top-10 left-10  text-xl'><FaChevronLeft /></button>
+        <CommunityOtherModals />
+      </div>
+      )}
 
       <div className="flex flex-row ">
         <Sidebar />
@@ -125,7 +147,7 @@ export default function CommunityAiTraining() {
           <div className="flex flex-row justify-between gap-4 w-full py-8">
             <div className="flex flex-row gap-3 w-4/5 mx-auto justify-center">
               <button className="text-[14px] font-semibold" onClick={() => setIsModalOpen(true)}>Ai Training</button>
-              <button className="text-[14px] text-[#6A6A6A]">Query Escalation Protocol</button>
+              <Link href='/query_escalation_protocol' className="text-[14px] text-[#6A6A6A]">Query Escalation Protocol</Link>
             </div>
             <div className="w-1/5 flex flex-row items-center gap-5 ">
               <p className="text-[20px]">Co-pilot</p>
@@ -145,9 +167,15 @@ export default function CommunityAiTraining() {
               <p className="text-center text-[24px]">What's happening in your Community?</p>
 
               <div className="flex flex-row w-full justify-between mt-5 ">
-                <button className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3" onClick={handleUpcomingAnouncement}>Upcoming Announcements</button>
-                <button className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3" onClick={handleCommunityEngagement}>Community Engagement</button>
-                <button className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3">Other Information</button>
+              <div className="hover:bg-gradient-to-r from-[#03FFA3] to-[#7F56D9] rounded-3xl p-[1px]">
+                <button className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3 hover:bg-gradient-to-r from-[#3A3A3A] to-[#000000]" onClick={handleUpcomingAnouncement}>Upcoming Announcements</button>
+                </div>
+                <div className="hover:bg-gradient-to-r from-[#03FFA3] to-[#7F56D9] rounded-3xl p-[1px]">
+                <button className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3 hover:bg-gradient-to-r from-[#3A3A3A] to-[#000000]" onClick={handleCommunityEngagement}>Community Engagement</button>
+                </div>
+                <div className="hover:bg-gradient-to-r from-[#03FFA3] to-[#7F56D9] rounded-3xl p-[1px]">
+                <button className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3 hover:bg-gradient-to-r from-[#3A3A3A] to-[#000000]" onClick={handleOthers}>Other Information</button>
+                </div>
               </div>
               <button onClick={handleSimulation} className="bg-gradient-to-r from-[#03FFA3] to-[#7F56D9] w-[222px] mx-auto mt-8 py-2  text-white rounded-[21px] flex flex-row items-center gap-2 justify-center"><span className="text-center"><FaTelegramPlane /></span>Simulate on Telegram</button>
             </div>
@@ -183,9 +211,10 @@ export default function CommunityAiTraining() {
 
 
       </div>
-      {isModalOpen && (
+      {/* {isModalOpen && ( */}
         <CommunityTrainYourAiModal />
-      )}
+      {/* )} */}
+      {/* <WelcomeToWorkspaceModal /> */}
     </div>
   )
 }

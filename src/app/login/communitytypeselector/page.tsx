@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Logo from '../../landingpages/images/Intel AI logo (1) (1) (1).png'
+import Link from "next/link";
 
 
 export default function CommunityTypeSelector() {
@@ -14,17 +15,16 @@ export default function CommunityTypeSelector() {
   };
 
   const handleNextClick = () => {
-    
         window.location.href = "/successfullogin";
     
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
+    <div className="h-screen flex flex-col items-center">
 
-      <div className="w-[90%] flex justify-end items-center pt-4">
+      <Link href='/' className="w-[90%] flex justify-start items-center pt-4">
         <Image src={Logo} alt="logo" className="lg:w-[8%]  w-[30%]" />
-      </div>
+      </Link>
 
       <div className='mt-4 pt-10 border-t border-[#363636] w-[95%] flex flex-col justify-center items-center'>
 

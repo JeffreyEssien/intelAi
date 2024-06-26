@@ -2,6 +2,9 @@
 
 import React, { useState } from 'react';
 import { AiOutlineSend, AiOutlineLike, AiOutlineDislike, AiOutlineClose } from 'react-icons/ai';
+import { FaDiscord } from 'react-icons/fa';
+import { FaTelegram, FaXTwitter } from 'react-icons/fa6';
+import SuccessfulInitialTrainingModal from '../successful_initial_training_modal/page';
 
 interface Message {
     sender: 'user' | 'bot';
@@ -12,7 +15,9 @@ interface Message {
 export default function TelegramSimulation() {
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState('');
-    const [useCount, setUseCount] = useState(0); // Counter for the number of uses
+    const [showSuccessful, setShowSuccessful] = useState(false)
+    const [useCount, setUseCount] = useState(0);
+    const [showSimulation, setShowSimulation] = useState(true)
 
     const handleSendMessage = (messageText?: string) => {
         if (useCount >= 15) return; // Check if the use limit is reached
@@ -27,8 +32,7 @@ export default function TelegramSimulation() {
         };
         setMessages([...messages, newMessage]);
         setInput('');
-        setUseCount(useCount + 1); // Increment the use counter
-
+        setUseCount(useCount + 1);
         // Simulate bot response
         setTimeout(() => {
             const botResponse: Message = {
@@ -41,7 +45,7 @@ export default function TelegramSimulation() {
     };
 
     const handleCompleteTraining = () => {
-        window.location.href = '/community_dashboard_after_initial_training';
+        setShowSuccessful(!showSuccessful)
     }
 
     const handleButtonClick = (messageText: string) => {
@@ -49,29 +53,35 @@ export default function TelegramSimulation() {
     };
 
     const handleClose = () => {
-        window.location.href = '/community_ai_training';
+        setShowSimulation(!showSimulation)
     };
 
     return (
         <div className='absolute w-full z-10'>
+              {showSuccessful && (
+                <div className='absolute w-full h-screen z-20'>
+                    <SuccessfulInitialTrainingModal />
+                </div>
+            )}
+             {showSimulation && (
             <div className="flex flex-col items-end bg-[#131313] bg-opacity-65 inset-0 ">
-                <div className="bg-[#131313] flex flex-col min-h-screen h-auto w-1/4 relative">
+                <div className="bg-[#131313] flex flex-col h-auto overflow-hidden w-1/4 relative">
                     <button onClick={handleClose} className="absolute top-4 right-4 text-white">
                         <AiOutlineClose size={18} />
                     </button>
                     <div className="absolute top-4 right-16 text-white bg-[#131313] p-4">
                         <p className='flex items-center text-[12px] text-[#858585]'>
-                        <span className='text-white'>  {15 - useCount}</span> / 15  prompts
+                            <span className='text-white'>  {0 + useCount}</span> / 15  prompts
                         </p>
                     </div>
                     <select className="bg-[#1D1D1D] w-1/3 p-4 m-4 rounded-[10px]">
-                        <option>Telegram</option>
-                        <option>Twitter</option>
-                        <option>Discord</option>
+                        <option className='flex items-center gap-2'><FaTelegram />Telegram</option>
+                        <option className='flex items-center gap-2'><FaXTwitter /> Twitter</option>
+                        <option className='flex items-center gap-2'><FaDiscord /> Discord</option>
                     </select>
 
-                    <div className="m-4 bg-[#181818] min-h-screen h-auto rounded-t-[20px] relative">
-                        <p className="bg-[#1B1B1B] w-full p-6 text-[#858585] rounded-[20px]">Simulation Workspace</p>
+                    <div className=" bg-[#181818] h-screen overflow-hiden rounded-t-[20px] relative">
+                        <p className="bg-[#1B1B1B] w-full p-4 text-[#858585] rounded-[20px]">Simulation Workspace</p>
                         <div className="w-full flex flex-row justify-around mt-4">
                             <div className="hover:bg-gradient-to-r from-[#03FFA3] to-[#7F56D9] rounded-[8px] p-[2px]">
                                 <button
@@ -98,7 +108,7 @@ export default function TelegramSimulation() {
                                 </button>
                             </div>
                         </div>
-                        <div className="flex-1 mb-20 mt-6 px-4 h-auto">
+                        <div className="flex-1 mb-20 mt-6 px-4 h-screen overflow-y-scroll scrollbar-thin">
                             {messages.map((message, index) => (
                                 <div key={index} className={`mb-4 flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
                                     {message.sender === 'bot' && (
@@ -135,7 +145,7 @@ export default function TelegramSimulation() {
                                 </div>
                             ))}
                         </div>
-                        <div className="flex flex-col items-center bg-[#181818] py-2 absolute bottom-2 w-full ">
+                        <div className="flex flex-col items-center bg-[#181818] py-2 absolute bottom-0 w-full ">
                             <div className='flex flex-row px-4 w-full'>
                                 <input
                                     type="text"
@@ -157,6 +167,7 @@ export default function TelegramSimulation() {
                     </div>
                 </div>
             </div>
+             )}
         </div>
     );
 }

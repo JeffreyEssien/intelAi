@@ -78,7 +78,7 @@ export default function LauuchpadAiTraining() {
                         </div>
 
                         <div className="mt-20 flex flex-col w-[80%] mx-auto items-center">
-                            <p className="text-center text-[24px]">What’s new with your launchpad projects?</p>
+                            <p className="text-center text-[24px] font-bold">What’s new with your launchpad projects?</p>
 
                             <div className="flex flex-row w-[60%] justify-around mt-5 ">
                                 <div className="hover:bg-gradient-to-r from-[#03FFA3] to-[#7F56D9] rounded-3xl p-[1px]">
@@ -88,7 +88,6 @@ export default function LauuchpadAiTraining() {
                                 <div className="hover:bg-gradient-to-r from-[#03FFA3] to-[#7F56D9] rounded-3xl p-[1px]">
                                     <li className="border-[#202020] border rounded-3xl text-center min-w-[266px] flex items-center justify-center py-3 hover:bg-gradient-to-r from-[#3A3A3A] to-[#000000]">Update  Previously Listed Projects</li>
                                 </div>
-
 
                             </div>
 

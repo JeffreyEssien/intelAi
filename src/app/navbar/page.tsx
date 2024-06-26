@@ -30,7 +30,7 @@ export default function Navbar() {
                     <p className="w-[10%]"><Image src={Icon3} alt="image" /></p>
                 </div>
                 <div className="w-[100%] lg:w-auto bg-gradient-to-r from-[#03FFA3] to-[#7F56D9] rounded-[66px] py-[1px] px-[1px]">
-                    <Link href='/login'><button className="lg:px-10 px-2 w-full lg:w-auto rounded-[66px] py-2 bg-gradient-to-r from-[#3A3A3A] to-[#000000] lg:text-[14px] text-[10px]">Request Access</button></Link>
+                    <Link href='/login'><button className="lg:px-10 px-2 w-full lg:w-auto rounded-[66px] py-2 bg-gradient-to-r from-[#3A3A3A] to-[#000000] lg:text-[14px] text-[10px]">Get Access</button></Link>
                 </div>
             </ul>
       </div>

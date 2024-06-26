@@ -28,7 +28,7 @@ export default function Page1() {
         <p className=" leading-tight lg:text-[64px] text-[30px] text-center w-[80%] bg-gradient-to-r from-[#03FFA3] via- to-[#7F56D9] text-transparent mb-5 lg:flex flex-col font-semibold hidden" style={bgClipText}>Collaboration Protocol of <span className=''>Blockchain AI Agents</span></p>
         <p className=" leading-tight lg:text-[64px] text-[30px] text-center w-[80%] bg-gradient-to-r from-[#03FFA3] via- to-[#7F56D9] text-transparent mb-5 flex flex-col font-semibold lg:hidden" style={bgClipText}>Communication Protocol of Blockchain AI Agents</p>
 
-        <p className="lg:w-[55%] w-[80%] text-center text-[22px] mb-10 mt-4 flex flex-col items-center text-[#8A8A8A]">
+        <p className="lg:w-[35%] w-[80%] text-center text-[22px] mb-10 flex flex-col items-center text-[#8A8A8A]">
           Tailored Intelligence built from the ground up specifically for the Web3 Ecosystem.
         </p>
 

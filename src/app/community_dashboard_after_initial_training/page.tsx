@@ -29,6 +29,10 @@ export default function CommunityDashboardAIT() {
         setIsOpen(false);
     };
 
+    const handleUpdateAi = () => {
+        window.location.href = '/community_ai_training'
+    }
+
     return (
         <div className="flex flex-row ">
             <Sidebar />
@@ -59,7 +63,7 @@ export default function CommunityDashboardAIT() {
                                 <p className="text-[30px] text-white w-[50%] font-200">Train, Update, Test & Simulate!</p>
                                 <p className="text-[#969696] text-[10px] w-[50%]">Train IntelAI to suit your community and requirements seamlessly.Train IntelAI to suit your community and requirements seamlessly.</p>
                             </div>
-                            <button className="text-black bg-white rounded-[66px] py-3 w-[150px] absolute bottom-4 right-4">Update Ai</button>
+                            <button className="text-black bg-white rounded-[66px] py-3 w-[150px] absolute bottom-4 right-4" onClick={handleUpdateAi}>Update Ai</button>
                         </div>
 
                         <ConnectCommunities />

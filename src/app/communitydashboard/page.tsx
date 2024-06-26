@@ -31,8 +31,8 @@ export default function CommunityDashboard() {
                     </div>
                     <div className="w-1/5 flex flex-row items-center gap-5 ">
                         <p className="text-[20px]">Co-pilot</p>
-                        <div onClick={handleToggle} className={`w-[54px] h-[18px] flex items-center bg-[#545454] rounded-full p-1 cursor-pointer ${isOn ? '' : 'bg-white'}`}>
-                            <div className={`bg-white w-[14px] h-[14px] rounded-full shadow-md transform duration-300 ease-in-out ${isOn ? 'translate-x-8 bg-green-500' : ''}`}></div>
+                        <div onClick={handleToggle} className={`w-[54px] h-[18px] flex items-center bg-[#545454] rounded-full p-1 cursor-pointer ${isOn ? '' : 'bg-[#545454'}`}>
+                            <div className={` w-[14px] h-[14px] rounded-full shadow-md transform duration-300 ease-in-out ${isOn ? 'translate-x-8 bg-green-500' : 'bg-white'}`}></div>
                         </div>
                         {isOn ? <p>on</p> : <p>off</p>}
                     </div>
@@ -41,7 +41,7 @@ export default function CommunityDashboard() {
 
                     {/* Hello Username */}
                 <div className="bg-[#141414] min-h-screen w-full rounded-[40px] flex flex-col">
-                    <p className="text-[36px] mt-10 ml-10">Hello,  Username 👋</p>
+                    <p className="text-[36px] mt-10 ml-10 font-extralight">Hello,  Username 👋</p>
                     <p className="text-[14px] text-[#A9A9A9] mt-4 ml-10 w-[25%]">To get started on the Intel AI Platform, here are a few important tasks to  carry out</p>
 
                         {/* Train your ai ti simulate your prefernce div */}
