@@ -49,49 +49,47 @@ const escalationData = [
 export default function EscalationReport() {
     return (
         <div className='flex flex-row w-full'>
-        <div className="w-full min-h-screen h-auto bg-[#131313] rounded-t-[24px] pt-10 pl-14 flex flex-col">
-            <button className="bg-[#1B1B1B] rounded-[25px] py-1 text-[14px] w-[150px]">Escallation Report</button>
+            <div className="w-full min-h-screen h-auto bg-[#131313] rounded-t-[24px] pt-10 pl-14  flex flex-col">
+                <button className="bg-[#1B1B1B] rounded-[25px] py-1 text-[14px] w-[150px]">Escallation Report</button>
 
-            <div className="w-4/6 flex flex-row mt-10">
-                {escalationData.map((data, index) => (
-                    <StatCard
-                        key={index}
-                        title={data.title}
-                        count={data.count}
-                        percentage={data.percentage}
-                    />
-                ))}
-            </div>
-            <div className='flex flex-row gap-3 w-1/5 mt-8 border border-[#1C1C1C] rounded-[24px]'>
-                <button className='bg-[#161616] text-[#666666] text-[14px] rounded-[24px] px-2 py-2 w-1/3  focus:text-black focus:bg-white font-semibold hover:text-black hover:bg-white '>Unresolved</button>
-                <button className='bg-[#161616] text-[#666666] text-[14px] rounded-[24px] px-2 py-2 w-1/3 focus:text-black focus:bg-white font-semibold hover:text-black hover:bg-white '>Resolved</button>
-                <button className='bg-[#161616] text-[#666666] text-[14px] rounded-[24px] px-2 py-2 w-1/3 focus:text-black focus:bg-white font-semibold hover:text-black hover:bg-white '>All</button>
-            </div>
-            <EscalationTable />
+                <div className="lg:w-5/6 w-full grid-cols-2 lg:flex lg:flex-row mt-10">
+                    {escalationData.map((data, index) => (
+                        <StatCard
+                            key={index}
+                            title={data.title}
+                            count={data.count}
+                            percentage={data.percentage}
+                        />
+                    ))}
+                </div>
 
-            <div className='bg-[#0D0D0D] flex flex-row items-center px-4 mb-10 w-1/2 justify-between'>
-                <button className='flex flex-row items-center justify-center gap-2 bg-[#0D0D0D] py-2 border-r border-[#131313]'>
-                    <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.8337 6.99935H1.16699M1.16699 6.99935L7.00033 12.8327M1.16699 6.99935L7.00033 1.16602" stroke="#FDFEFF" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    </span>
-                    Previous</button>
-                <button className='border-[#131313] px-4 border-r py-4'>1</button>
-                <button  className='border-[#131313] px-4 border-r py-4'>2</button>
-                <button  className='border-[#131313] px-4 border-r py-4'>3</button>
-                <button  className='border-[#131313] px-4 border-r py-4'>...</button>
-                <button  className='border-[#131313] px-4 border-r py-4'>8</button>
-                <button  className='border-[#131313] px-4 border-r py-4'>9</button>
-                <button  className='border-[#131313] px-4 border-r py-4'>10</button>
-                <button className='flex flex-row items-center justify-center gap-2 bg-[#0D0D0D] py-2 border-r border-[#131313]'>Next
-                    <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.16699 6.99935H12.8337M12.8337 6.99935L7.00033 1.16602M12.8337 6.99935L7.00033 12.8327" stroke="#FDFEFF" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    </span>
-                </button>
+                <EscalationTable />
+
+                <div className='w-full flex justify-end pr-10'>
+                    <div className='bg-[#0D0D0D] flex flex-row items-center px-4 mb-10 w-1/2 justify-between'>
+                        <button className='flex flex-row items-center justify-center gap-2 bg-[#0D0D0D] py-2 border-r border-[#131313]'>
+                            <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.8337 6.99935H1.16699M1.16699 6.99935L7.00033 12.8327M1.16699 6.99935L7.00033 1.16602" stroke="#FDFEFF" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            </span>
+                            Previous</button>
+                        <button className='border-[#131313] px-4 border-r py-4'>1</button>
+                        <button className='border-[#131313] px-4 border-r py-4'>2</button>
+                        <button className='border-[#131313] px-4 border-r py-4'>3</button>
+                        <button className='border-[#131313] px-4 border-r py-4'>...</button>
+                        <button className='border-[#131313] px-4 border-r py-4'>8</button>
+                        <button className='border-[#131313] px-4 border-r py-4'>9</button>
+                        <button className='border-[#131313] px-4 border-r py-4'>10</button>
+                        <button className='flex flex-row items-center justify-center gap-2 bg-[#0D0D0D] py-2 border-r border-[#131313]'>Next
+                            <span><svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.16699 6.99935H12.8337M12.8337 6.99935L7.00033 1.16602M12.8337 6.99935L7.00033 12.8327" stroke="#FDFEFF" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
-        <QuerySortingPortal />
+            <QuerySortingPortal />
         </div>
     );
 }

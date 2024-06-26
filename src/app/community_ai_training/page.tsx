@@ -145,7 +145,7 @@ export default function CommunityAiTraining() {
         <Sidebar />
         <div className="flex flex-col items-center w-full">
           <div className="flex flex-row justify-between gap-4 w-full py-8">
-            <div className="flex flex-row gap-3 w-4/5 mx-auto justify-center">
+            <div className="flex flex-row gap-3 w-4/5 mx-auto justify-center items-center">
               <button className="text-[14px] font-semibold" onClick={() => setIsModalOpen(true)}>Ai Training</button>
               <Link href='/query_escalation_protocol' className="text-[14px] text-[#6A6A6A]">Query Escalation Protocol</Link>
             </div>

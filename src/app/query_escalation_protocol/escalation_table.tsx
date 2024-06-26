@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react';
+import React, { useState } from 'react';
 
 const TableHeader = () => (
     <thead className="bg-[#1B1B1B] text-[#898989] text-[12px] uppercase">
@@ -10,13 +10,9 @@ const TableHeader = () => (
             <th className="py-2 px-4">Platform</th>
             <th className="py-2 px-4">Query</th>
             <th className="py-2 px-4">Time</th>
-            <th className="py-2 px-4">   </th>
+            <th className="py-2 px-4">Action</th>
         </tr>
     </thead>
-);
-
-const SortButton = () => (
-    <button className="bg-[#03FFA3] text-black px-3 py-1 rounded-full">Sort ↗</button>
 );
 
 type TableRowProps = {
@@ -25,19 +21,26 @@ type TableRowProps = {
     platform: string;
     query: string;
     time: string;
+    isResolved: boolean;
+    onResolve: () => void;
+    viewMode: string;
 };
 
-const TableRow: React.FC<TableRowProps> = ({ index, username, platform, query, time }) => (
+const TableRow: React.FC<TableRowProps> = ({ index, username, platform, query, time, isResolved, onResolve, viewMode }) => (
     <tr className={`text-white border-b border-[#131313] text-center ${index % 2 === 0 ? 'bg-[#0A0908]' : 'bg-[#1D1D1D]'}`}>
         <td className="py-2 px-4 text-center text-[#3D3D3D]">{index + 1}</td>
-        <td className="py-2 px-4">
-            {username}
-        </td>
-        <td  className="py-2 px-4"> {platform}</td>
-        <td className="py-2 px-4 text-left w-[30%] ">{query}</td>
+        <td className="py-2 px-4">{username}</td>
+        <td className="py-2 px-4">{platform}</td>
+        <td className="py-2 px-4 text-left w-[30%]">{query}</td>
         <td className="px-4">{time}</td>
         <td className="py-2 px-4 text-center">
-            <SortButton />
+            {isResolved ? (
+                <span className="text-[#03FFA3]">Resolved</span>
+            ) : (
+                viewMode !== 'resolved' && (
+                    <button onClick={onResolve} className="bg-[#03FFA3] text-black px-3 py-1 rounded-full">Sort ↗</button>
+                )
+            )}
         </td>
     </tr>
 );
@@ -53,36 +56,62 @@ const tableData = [
 ];
 
 export default function EscalationTable() { 
+    const [resolvedRows, setResolvedRows] = useState<number[]>([]);
+    const [viewMode, setViewMode] = useState<'all' | 'resolved' | 'unresolved'>('unresolved');
+
+    const handleResolve = (id: number) => {
+        setResolvedRows([...resolvedRows, id]);
+    };
+
+    const filteredData = tableData.filter(row => {
+        if (viewMode === 'all') return true;
+        if (viewMode === 'resolved') return resolvedRows.includes(row.id);
+        if (viewMode === 'unresolved') return !resolvedRows.includes(row.id);
+        return true;
+    });
+
     return(
-    <div className="w-full h-auto pb-10 pr-10 bg-[#131313] mt-10">
-        <div className="bg-black rounded-lg overflow-hidden">
-            <table className="w-full table-auto">
-                <TableHeader />
-                <tbody>
-                    {tableData.map((row, index) => (
-                        <TableRow
-                            key={row.id}
-                            index={index}
-                            username={row.username}
-                            platform={row.platform}
-                            query={row.query}
-                            time={row.time}
-                        />
-                    ))}
-                </tbody>
-            </table>
-            {/* <div className="bg-[#1B1B1B] text-white py-2 px-4 flex justify-between items-center">
-                <button className="bg-gray-700 text-white px-3 py-1 rounded">Previous</button>
-                <div>
-                    <button className="bg-gray-700 text-white px-2 py-1 rounded mx-1">1</button>
-                    <button className="bg-gray-700 text-white px-2 py-1 rounded mx-1">2</button>
-                    <button className="bg-gray-700 text-white px-2 py-1 rounded mx-1">3</button>
-                    <button className="bg-gray-700 text-white px-2 py-1 rounded mx-1">...</button>
-                    <button className="bg-gray-700 text-white px-2 py-1 rounded mx-1">10</button>
-                </div>
-                <button className="bg-gray-700 text-white px-3 py-1 rounded">Next</button>
-            </div> */}
+        <div className="w-full h-auto pb-10 pr-10 bg-[#131313] my-5">
+            <div className='flex flex-row gap-3 w-1/3 mt-8 border border-[#1C1C1C] rounded-[24px] mb-5'>
+                <button 
+                    onClick={() => setViewMode('unresolved')}
+                    className={`bg-[#161616] text-[14px] rounded-[24px] px-2 py-2 w-1/3 font-semibold ${viewMode === 'unresolved' ? 'text-black bg-white' : 'text-[#666666] hover:text-black hover:bg-white'}`}
+                >
+                    Unresolved
+                </button>
+                <button 
+                    onClick={() => setViewMode('resolved')}
+                    className={`bg-[#161616] text-[14px] rounded-[24px] px-2 py-2 w-1/3 font-semibold ${viewMode === 'resolved' ? 'text-black bg-white' : 'text-[#666666] hover:text-black hover:bg-white'}`}
+                >
+                    Resolved
+                </button>
+                <button 
+                    onClick={() => setViewMode('all')}
+                    className={`bg-[#161616] text-[14px] rounded-[24px] px-2 py-2 w-1/3 font-semibold ${viewMode === 'all' ? 'text-black bg-white' : 'text-[#666666] hover:text-black hover:bg-white'}`}
+                >
+                    All
+                </button>
+            </div>
+            <div className="bg-black rounded-lg overflow-hidden">
+                <table className="w-full table-auto">
+                    <TableHeader />
+                    <tbody>
+                        {filteredData.map((row, index) => (
+                            <TableRow
+                                key={row.id}
+                                index={index}
+                                username={row.username}
+                                platform={row.platform}
+                                query={row.query}
+                                time={row.time}
+                                isResolved={resolvedRows.includes(row.id)}
+                                onResolve={() => handleResolve(row.id)}
+                                viewMode={viewMode}
+                            />
+                        ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-);
+    );
 }
